@@ -1,0 +1,8 @@
+#!/bin/sh
+#/home/MSF/www/html/wsdl-writer/wsdl WebServiceMSF.php http://10.0.0.3/webservice/ server.wsdl index.php
+#ATTENTION : doit etre exécute dans une console msf01 pas ailleurs ;) 
+#/home/MSF/www/html/wsdl-writer/wsdl ../Toolbox/WebserviceMSF.php http://vecsys.mediaspeech.com/dev/webservice/ server.wsdl index.php 
+/home/MSF/www/html/wsdl-writer/wsdl ../Toolbox/WebserviceMSF.php https://mediaspeech.com/webservice/ server.wsdl index.php 
+/home/MSF/www/html/wsdl-writer/wsdl ../Toolbox/WebserviceMSF.php http://10.229.190.20/webservice/ serverinternal.wsdl index.php 
+/home/MSF/www/html/wsdl-writer/wsdl ../Toolbox/WebserviceMSF.php http://10.229.190.20/dev/webservice/ serverdev.wsdl index.php 
+chown apache:apache *

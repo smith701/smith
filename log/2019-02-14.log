@@ -1,0 +1,36 @@
+15:07:11 [?] (slurm_script) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+15:07:11 [?] (slurm_script) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+15:23:36 [?] (slurm_script) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+15:23:36 [?] (slurm_script) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+15:26:57 [?] (script_vtk_merge.php) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+15:26:57 [?] (script_vtk_merge.php) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+15:26:57 [?] (script_vtk_merge.php) /home/MSF/www/scripts/script_vtk_merge.php JobId=7 ret=0
+15:26:57 [?] (script_vtk_merge.php) TraitementFin : JobId=7 CodeRetour=0 
+15:26:57 [?] (script_vtk_merge.php) grep "state=end" /home/MSF/tmp/7.log | grep "RT=" -> code=0 text=[2019-02-14 15:26:56 vtk_trans] state=end elapsed=198 RT=6.59 RT=6.59
+15:26:57 [?] (script_vtk_merge.php) fin merge
+11:01:02 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+11:01:02 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+12:01:12 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+12:01:12 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+13:01:12 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+13:01:12 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+14:01:11 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+14:01:11 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+15:01:11 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+15:01:11 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+16:01:11 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+16:01:11 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+17:01:11 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+17:01:11 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+18:01:11 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+18:01:11 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+19:01:17 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+19:01:17 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+20:01:12 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+20:01:12 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+21:01:12 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+21:01:12 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+22:01:11 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+22:01:11 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+23:01:11 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+23:01:11 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf

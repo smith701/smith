@@ -1,0 +1,16 @@
+scontrol show nodes
+scontrol update nodename=xXx state=resume
+scontrol update nodename=xXx state=down
+
+release tous les jobs
+squeue  -o %i -h | xargs scontrol release
+
+supprime certains jobs
+squeue| grep media| gawk '{print "scancel "$1}'| sh 
+
+#surveille
+while [ 1 ] ; do squeue | grep R | wc -l ; sleep 5; done
+
+#purge la base de donnée
+sacctmgr archive dump
+

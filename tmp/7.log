@@ -1,0 +1,878 @@
+[2019-02-14 15:23:38 vtk_trans] command line:  -ifile /users/1/working//test-cts-eng.wav.MSF.wav -ofile /users/1/working//7.xml -bpath /home/vtk/bin -cpath /home/vtk/conf -wpath /home/MSF/tmp/7 -verbose 2 -to vml -normalize -quality 0 -log /home/MSF/tmp/7.log -jobpriority 1 -language eng -type cts -jobname 7 -jobnthreads 1
+[2019-02-14 15:23:38 vtk_trans] bin-path: /home/vtk/bin VTK BIN Version 6.0.4 2018-11-30 VECSYS
+[2019-02-14 15:23:38 vtk_trans] conf-path: /home/vtk/conf
+[2019-02-14 15:23:38 vtk_trans] working-path: /home/MSF/tmp/7
+hostname : ms-v5-vm
+os : CentOS Linux release 7.6.1810 (Core) 
+kernel : Linux 3.10.0-957.1.3.el7.x86_64 #1 SMP Thu Nov 29 14:49:43 UTC 2018
+hypervisor : vmware
+arch : x86_64
+cpu : Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz
+sockets : 4
+cores : 1
+threads : 1
+memory : 5685 MB
+swap : 8063 MB
+disk-size : 50 GB
+disk-dev : /dev/sdb1
+disk-uuid : 4AA5CBB9
+[2019-02-14 15:23:38 vtk_trans] working-dir: /home/MSF/tmp/7
+[2019-02-14 15:23:38 vtk_trans] <command name="/home/vtk/bin/vplay -fwav:r /home/MSF/tmp/7/ifile.wav 2>&1"/>
+[2019-02-14 15:23:38 vtk_trans] <command name="/usr/bin/perl -ne 'printf qq(%.0f\n), $1 if (/duration:\s*(\S+)\s*seconds/)'"/>
+[2019-02-14 15:23:38 vtk_trans] audio-duration: 31 seconds
+[2019-02-14 15:23:38 vtk_trans] <command name="/usr/bin/perl -e 'printf qq(%.2f\n), 0/31'"/>
+[2019-02-14 15:23:38 vtk_trans] state=codec elapsed=0 RT=0.00
+[2019-02-14 15:23:38 vtk_trans] start the diarization
+[2019-02-14 15:23:38 vtk_trans] create directory '/home/MSF/tmp/7/spkrdia'
+[2019-02-14 15:23:38 vtk_trans] 
+[2019-02-14 15:23:38 vtk_trans] *******************
+[2019-02-14 15:23:38 vtk_trans] Speaker diarization
+[2019-02-14 15:23:38 vtk_trans] *******************
+[2019-02-14 15:23:38 vtk_trans] <spkrdia>
+[2019-02-14 15:23:38 vtk_trans] <command name="/home/vtk/bin/vtk_spkrdia -type cts -ifile /home/MSF/tmp/7/ifile.wav -ofile /home/MSF/tmp/7/part.stm -ofmt stm -wpath /home/MSF/tmp/7/spkrdia -log /home/MSF/tmp/7/part.log -verbose 2  -jobnthreads 1"/>
+[2019-02-14 15:23:38 vtk_kspkrdia] command line: /home/vtk/bin/vtk_kspkrdia -type cts -ifile /home/MSF/tmp/7/ifile.wav -ofile /home/MSF/tmp/7/part.stm -ofmt stm -wpath /home/MSF/tmp/7/spkrdia -log /home/MSF/tmp/7/part.log -verbose 2 -jobnthreads 1
+[2019-02-14 15:23:38 vtk_kspkrdia] bin-path: /home/vtk/bin VTK BIN Version 6.0.4 2018-11-30 VECSYS
+[2019-02-14 15:23:38 vtk_kspkrdia] conf-path: /home/vtk/conf
+[2019-02-14 15:23:38 vtk_kspkrdia] working-path: /home/MSF/tmp/7/spkrdia
+[2019-02-14 15:23:38 vtk_kspkrdia] working-dir: /home/MSF/tmp/7/spkrdia
+[2019-02-14 15:23:38 vtk_kspkrdia] mode = 0
+[2019-02-14 15:23:38 vtk_kspkrdia] <command name="/home/vtk/bin/vplay -fwav:r /home/MSF/tmp/7/ifile.wav 2> /home/MSF/tmp/7/spkrdia/audio.log"/>
+[2019-02-14 15:23:38 vtk_kspkrdia] <command name="/usr/bin/perl -ne 'print $1 if (/duration:\s*(\S+)\s*seconds/g);' /home/MSF/tmp/7/spkrdia/audio.log"/>
+[2019-02-14 15:23:38 vtk_kspkrdia] <command name="/usr/bin/perl -ne 'print $1 if (/rate:\s*(\S+)\s*Hz/g);' /home/MSF/tmp/7/spkrdia/audio.log"/>
+[2019-02-14 15:23:39 vtk_kspkrdia] <command name="/usr/bin/perl -ne 'print $1 if (/format: \s*(\S+)\s*format/g);' /home/MSF/tmp/7/spkrdia/audio.log"/>
+[2019-02-14 15:23:39 vtk_kspkrdia] <command name="/usr/bin/perl -ne 'print $1 if (/bits per sample:\s*(\S+)\s*bits/g);' /home/MSF/tmp/7/spkrdia/audio.log"/>
+[2019-02-14 15:23:39 vtk_kspkrdia] <command name="/usr/bin/perl -ne 'print $1 if (/number of channels:\s*(\S+)/g);' /home/MSF/tmp/7/spkrdia/audio.log"/>
+[2019-02-14 15:23:39 vtk_kspkrdia] file /home/MSF/tmp/7/ifile.wav: fmt=pcm, dur=30.730 s., nch=1, sr=8000 Hz, nbps=16 bits
+[2019-02-14 15:23:39 vtk_kspkrdia] <command name="/usr/bin/rm -rf /home/MSF/tmp/7/spkrdia/1"/>
+[2019-02-14 15:23:39 vtk_kspkrdia] create directory '/home/MSF/tmp/7/spkrdia/1'
+[2019-02-14 15:23:39 vtk_kspkrdia] <command name="/home/vtk/bin/vplay -fwav:r /home/MSF/tmp/7/ifile.wav 2>&1"/>
+[2019-02-14 15:23:39 vtk_kspkrdia] <command name="/usr/bin/perl -ne 'printf qq(%.0f\n), $1 if (/duration:\s*(\S+)\s*seconds/)'"/>
+[2019-02-14 15:23:39 vtk_kspkrdia] <command name="/home/vtk/bin/vplay -fwav:r /home/MSF/tmp/7/ifile.wav 2>&1 | /usr/bin/perl -ne 'printf qq(%.2f\n), $1 if (/duration:\s*(\S+)\s*seconds/)'"/>
+[2019-02-14 15:23:39 vtk_kspkrdia] audio-duration=31 seconds
+[2019-02-14 15:23:39 vtk_kspkrdia] start of speaker diarization vtk_kspkrdia 1.3.3 running on localhost
+[2019-02-14 15:23:39 vtk_kspkrdia] ==========
+[2019-02-14 15:23:39 vtk_kspkrdia] transition: start -> init
+[2019-02-14 15:23:39 vtk_kspkrdia] ==========
+[2019-02-14 15:23:39 vtk_kspkrdia] <command name="/usr/bin/perl -e 'printf qq(%.2f\n), 0/31'"/>
+[2019-02-14 15:23:39 vtk_kspkrdia] state=init elapsed=0 RT=0.00
+[2019-02-14 15:23:39 vtk_kspkrdia] ==========
+[2019-02-14 15:23:39 vtk_kspkrdia] transition: init -> vadlstm
+[2019-02-14 15:23:39 vtk_kspkrdia] ==========
+[2019-02-14 15:23:39 vtk_kspkrdia] <command name="/home/vtk/bin/kld_compute-mfcc-feats  --frame-length=25 --frame-shift=10 --high-freq=3000 --low-freq=330 --num-mel-bins=28 --num-ceps=28 --sample-frequency=8000 --use-energy=false --license=/home/vtk/conf/vtk.lic 'ark:/home/vtk/bin/kld_extract-segments scp:/home/MSF/tmp/7/spkrdia/1/wav.scp /home/MSF/tmp/7/spkrdia/1/segments ark:- |' ark:- | /home/vtk/bin/kld_copy-feats --write-num-frames=ark,t:/home/MSF/tmp/7/spkrdia/1/utt2num_frames --compress=true ark:- ark,scp:/home/MSF/tmp/7/spkrdia/1/raw_mfcc_vad_bp_hires.ark,/home/MSF/tmp/7/spkrdia/1/feats.scp"/>
+/home/vtk/bin/kld_compute-mfcc-feats --frame-length=25 --frame-shift=10 --high-freq=3000 --low-freq=330 --num-mel-bins=28 --num-ceps=28 --sample-frequency=8000 --use-energy=false --license=/home/vtk/conf/vtk.lic 'ark:/home/vtk/bin/kld_extract-segments scp:/home/MSF/tmp/7/spkrdia/1/wav.scp /home/MSF/tmp/7/spkrdia/1/segments ark:- |' ark:- 
+/home/vtk/bin/kld_copy-feats --write-num-frames=ark,t:/home/MSF/tmp/7/spkrdia/1/utt2num_frames --compress=true ark:- ark,scp:/home/MSF/tmp/7/spkrdia/1/raw_mfcc_vad_bp_hires.ark,/home/MSF/tmp/7/spkrdia/1/feats.scp 
+/home/vtk/bin/kld_extract-segments scp:/home/MSF/tmp/7/spkrdia/1/wav.scp /home/MSF/tmp/7/spkrdia/1/segments ark:- 
+LOG (kld_extract-segments[5.4.16~3-4f22]:main():extract-segments.cc:195) Successfully processed 1 lines out of 1 in the segments file. 
+LOG (kld_compute-mfcc-feats[5.4.16~3-4f22]:main():compute-mfcc-feats.cc:204)  Done 1 out of 1 utterances.
+LOG (kld_copy-feats[5.4.16~3-4f22]:main():copy-feats.cc:143) Copied 1 feature matrices.
+[2019-02-14 15:23:39 vtk_kspkrdia] <command name="/home/vtk/bin/kld_compute-cmvn-stats --spk2utt=ark:/home/MSF/tmp/7/spkrdia/1/spk2utt scp:/home/MSF/tmp/7/spkrdia/1/feats.scp ark,scp:/home/MSF/tmp/7/spkrdia/1/cmvn_sad_bp_hires.ark,/home/MSF/tmp/7/spkrdia/1/cmvn.scp"/>
+/home/vtk/bin/kld_compute-cmvn-stats --spk2utt=ark:/home/MSF/tmp/7/spkrdia/1/spk2utt scp:/home/MSF/tmp/7/spkrdia/1/feats.scp ark,scp:/home/MSF/tmp/7/spkrdia/1/cmvn_sad_bp_hires.ark,/home/MSF/tmp/7/spkrdia/1/cmvn.scp 
+LOG (kld_compute-cmvn-stats[5.4.16~3-4f22]:main():compute-cmvn-stats.cc:171) Done accumulating CMVN stats for 1 utterances; 0 had errors.
+[2019-02-14 15:23:39 vtk_kspkrdia] <command name="/home/vtk/bin/kld_nnet3-compute --use-gpu=no  --extra-left-context=70 --extra-left-context-initial=0 --extra-right-context=0 --extra-right-context-final=0 --frame-subsampling-factor=3 --frames-per-chunk=150 /home/vtk/conf/part/cts/cts.vad.model 'ark,s,cs:/home/vtk/bin/kld_apply-cmvn --norm-means=false --norm-vars=false --utt2spk=ark:/home/MSF/tmp/7/spkrdia/1/utt2spk scp:/home/MSF/tmp/7/spkrdia/1/cmvn.scp scp:/home/MSF/tmp/7/spkrdia/1/feats.scp ark:- |' 'ark:| /home/vtk/bin/kld_copy-matrix --apply-exp ark:- ark,scp:/home/MSF/tmp/7/spkrdia/1/output.ark,/home/MSF/tmp/7/spkrdia/1/output.scp'"/>
+/home/vtk/bin/kld_nnet3-compute --use-gpu=no --extra-left-context=70 --extra-left-context-initial=0 --extra-right-context=0 --extra-right-context-final=0 --frame-subsampling-factor=3 --frames-per-chunk=150 /home/vtk/conf/part/cts/cts.vad.model 'ark,s,cs:/home/vtk/bin/kld_apply-cmvn --norm-means=false --norm-vars=false --utt2spk=ark:/home/MSF/tmp/7/spkrdia/1/utt2spk scp:/home/MSF/tmp/7/spkrdia/1/cmvn.scp scp:/home/MSF/tmp/7/spkrdia/1/feats.scp ark:- |' 'ark:| /home/vtk/bin/kld_copy-matrix --apply-exp ark:- ark,scp:/home/MSF/tmp/7/spkrdia/1/output.ark,/home/MSF/tmp/7/spkrdia/1/output.scp' 
+LOG (kld_nnet3-compute[5.4.16~3-4f22]:SelectGpuId():cu-device.cc:119) Manually selected to compute on CPU.
+LOG (kld_nnet3-compute[5.4.16~3-4f22]:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 1 orphan nodes.
+LOG (kld_nnet3-compute[5.4.16~3-4f22]:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 2 orphan components.
+LOG (kld_nnet3-compute[5.4.16~3-4f22]:Collapse():nnet-utils.cc:1251) Added 1 components, removed 2
+/home/vtk/bin/kld_apply-cmvn --norm-means=false --norm-vars=false --utt2spk=ark:/home/MSF/tmp/7/spkrdia/1/utt2spk scp:/home/MSF/tmp/7/spkrdia/1/cmvn.scp scp:/home/MSF/tmp/7/spkrdia/1/feats.scp ark:- 
+LOG (kld_apply-cmvn[5.4.16~3-4f22]:main():apply-cmvn.cc:81) Copied 1 utterances.
+/home/vtk/bin/kld_copy-matrix --apply-exp ark:- ark,scp:/home/MSF/tmp/7/spkrdia/1/output.ark,/home/MSF/tmp/7/spkrdia/1/output.scp 
+LOG (kld_nnet3-compute[5.4.16~3-4f22]:main():nnet3-compute.cc:169) Time taken 1.33801s: real-time factor assuming 100 frames/sec is 0.0435692
+LOG (kld_nnet3-compute[5.4.16~3-4f22]:main():nnet3-compute.cc:172) Done 1 utterances, failed for 0
+LOG (kld_copy-matrix[5.4.16~3-4f22]:main():copy-matrix.cc:135) Copied 1 matrices.
+LOG (kld_nnet3-compute[5.4.16~3-4f22]:~CachingOptimizingCompiler():nnet-optimize.cc:734) 0.113 seconds taken in nnet3 compilation total (breakdown: 0.0347 compilation, 0.0617 optimization, 0 shortcut expansion, 0.0124 checking, 2.53e-05 computing indexes, 0.00407 misc.)
+[2019-02-14 15:23:42 vtk_kspkrdia] create directory '/home/MSF/tmp/7/spkrdia/1/graph_vad'
+[2019-02-14 15:23:42 vtk_kspkrdia] <command name="/home/vtk/bin/kld_prepare_sad_graph  --frame-shift=0.03 --max-speech-duration=20.0 --min-silence-duration=0.5 --min-speech-duration=0.5 - | /home/vtk/bin/fstcompile --isymbols=/home/MSF/tmp/7/spkrdia/1/graph_vad/words.txt --osymbols=/home/MSF/tmp/7/spkrdia/1/graph_vad/words.txt > /home/MSF/tmp/7/spkrdia/1/graph_vad/HCLG.fst"/>
+[2019-02-14 15:23:42 vtk_kspkrdia] <command name="/home/vtk/bin/kld_get_transform_probs_mat  --garbage-in-speech-weight=0.5 --sil-in-speech-weight=0.5 --priors=/home/vtk/conf/part/cts/cts.priors.vec > /home/MSF/tmp/7/spkrdia/1/transform_probs.mat"/>
+[2019-02-14 15:23:42 vtk_kspkrdia] <command name="/home/vtk/bin/kld_decode-faster  --acoustic-scale=0.30 --beam=8 --max-active=1000 /home/MSF/tmp/7/spkrdia/1/graph_vad/HCLG.fst 'ark:/home/vtk/bin/kld_copy-feats scp:/home/MSF/tmp/7/spkrdia/1/output.scp ark:- | /home/vtk/bin/kld_transform-feats /home/MSF/tmp/7/spkrdia/1/transform_probs.mat ark:- ark:- | /home/vtk/bin/kld_copy-matrix --apply-log ark:- ark:- |' ark:/dev/null ark:/home/MSF/tmp/7/spkrdia/1/ali.ark"/>
+/home/vtk/bin/kld_decode-faster --acoustic-scale=0.30 --beam=8 --max-active=1000 /home/MSF/tmp/7/spkrdia/1/graph_vad/HCLG.fst 'ark:/home/vtk/bin/kld_copy-feats scp:/home/MSF/tmp/7/spkrdia/1/output.scp ark:- | /home/vtk/bin/kld_transform-feats /home/MSF/tmp/7/spkrdia/1/transform_probs.mat ark:- ark:- | /home/vtk/bin/kld_copy-matrix --apply-log ark:- ark:- |' ark:/dev/null ark:/home/MSF/tmp/7/spkrdia/1/ali.ark 
+/home/vtk/bin/kld_copy-feats scp:/home/MSF/tmp/7/spkrdia/1/output.scp ark:- 
+LOG (kld_copy-feats[5.4.16~3-4f22]:main():copy-feats.cc:143) Copied 1 feature matrices.
+/home/vtk/bin/kld_transform-feats /home/MSF/tmp/7/spkrdia/1/transform_probs.mat ark:- ark:- 
+LOG (kld_transform-feats[5.4.16~3-4f22]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is 4.36976 over 1024 frames.
+LOG (kld_transform-feats[5.4.16~3-4f22]:main():transform-feats.cc:161) Applied transform to 1 utterances; 0 had errors.
+/home/vtk/bin/kld_copy-matrix --apply-log ark:- ark:- 
+LOG (kld_copy-matrix[5.4.16~3-4f22]:main():copy-matrix.cc:135) Copied 1 matrices.
+LOG (kld_decode-faster[5.4.16~3-4f22]:main():decode-faster.cc:139) Log-like per frame for utterance ifile+1 is 0.191819 over 1024 frames.
+LOG (kld_decode-faster[5.4.16~3-4f22]:main():decode-faster.cc:151) Time taken [excluding initialization] 0.035522s: real-time factor assuming 100 frames/sec is 0.00346894
+LOG (kld_decode-faster[5.4.16~3-4f22]:main():decode-faster.cc:154) Done 1 utterances, failed for 0
+LOG (kld_decode-faster[5.4.16~3-4f22]:main():decode-faster.cc:156) Overall log-likelihood per frame is 0.191819 over 1024 frames.
+[2019-02-14 15:23:42 vtk_kspkrdia] <command name="/home/vtk/bin/kld_copy-int-vector ark:/home/MSF/tmp/7/spkrdia/1/ali.ark ark,t:/home/MSF/tmp/7/spkrdia/1/ali.txt"/>
+/home/vtk/bin/kld_copy-int-vector ark:/home/MSF/tmp/7/spkrdia/1/ali.ark ark,t:/home/MSF/tmp/7/spkrdia/1/ali.txt 
+LOG (kld_copy-int-vector[5.4.16~3-4f22]:main():copy-int-vector.cc:83) Copied 1 vectors of int32.
+[2019-02-14 15:23:42 vtk_kspkrdia] <command name="/home/vtk/bin/vtk_ali2frm /home/MSF/tmp/7/spkrdia/1/ali.txt | /home/vtk/bin/kld_apply_map -f 4 /home/MSF/tmp/7/spkrdia/1/graph_vad/map"/>
+[2019-02-14 15:23:43 vtk_kspkrdia] <command name="/usr/bin/perl -e 'printf qq(%.2f\n), 4/31'"/>
+[2019-02-14 15:23:43 vtk_kspkrdia] state=vadlstm elapsed=4 RT=0.13
+[2019-02-14 15:23:43 vtk_kspkrdia] ==========
+[2019-02-14 15:23:43 vtk_kspkrdia] transition: vadlstm -> bicseg
+[2019-02-14 15:23:43 vtk_kspkrdia] ==========
+[2019-02-14 15:23:43 vtk_kspkrdia] create directory '/home/MSF/tmp/7/spkrdia/1/vad/speech'
+[2019-02-14 15:23:43 vtk_kspkrdia] <data>
+[2019-02-14 15:23:43 vtk_kspkrdia] <command name="/home/vtk/bin/vtk_frmexport -to frm -frate 33.33 -merge -sigdur 30.73 -verbose 2 -regspkr /S/ -smoothdur 0 /home/MSF/tmp/7/spkrdia/1/vad.frm | /usr/bin/wc -l"/>
+regspkr=/S/
+[2019-02-14 15:23:43 vtk_kspkrdia] <command name="/home/vtk/bin/vtk_frmexport -to frm -frate 33.33 -merge -sigdur 30.73 -verbose 2 -regspkr /S/ -smoothdur 0 /home/MSF/tmp/7/spkrdia/1/vad.frm | /home/vtk/bin/vtk_frmexport -to stm -frate 33.33 -sigdur 30.73 -verbose 2 | /usr/bin/perl -ane '$F[1]=1; print qq(@F\n);' | /home/vtk/bin/vtk_stmexport -sort spkr -to stm -verbose 2"/>
+regspkr=/S/
+regspkr=/excluded_region|inter_segment_gap/r
+
+use the open format
+open format='%fid %chan1 %spkr %stime %etime %cond %text'
+
+[2019-02-14 15:23:43 vtk_kspkrdia] 
+[2019-02-14 15:23:43 vtk_kspkrdia] ***********
+[2019-02-14 15:23:43 vtk_kspkrdia] Export data
+[2019-02-14 15:23:43 vtk_kspkrdia] ***********
+[2019-02-14 15:23:43 vtk_kspkrdia] <exportdata>
+[2019-02-14 15:23:43 vtk_kspkrdia] <command name="/home/vtk/bin/vtk_stmexport -large -to kseg /home/MSF/tmp/7/spkrdia/1/speech.stm -verbose 2"/>
+regspkr=/excluded_region|inter_segment_gap/r
+
+use the open format
+open format='%spkr+%uid %fid %stime %etime %chan0'
+
+[2019-02-14 15:23:43 vtk_kspkrdia] <command name="/home/vtk/bin/vtk_stmexport -large -to utt2spkr /home/MSF/tmp/7/spkrdia/1/speech.stm -verbose 2"/>
+regspkr=/excluded_region|inter_segment_gap/r
+
+use the open format
+open format='%spkr+%uid %spkr'
+
+[2019-02-14 15:23:43 vtk_kspkrdia] <command name="/home/vtk/bin/vtk_stmexport -large -to spkr2utt /home/MSF/tmp/7/spkrdia/1/speech.stm -verbose 2"/>
+regspkr=/excluded_region|inter_segment_gap/r
+
+[2019-02-14 15:23:43 vtk_kspkrdia] <frontend>
+[2019-02-14 15:23:43 vtk_kspkrdia] <command name="/home/vtk/bin/kld_frontend -exec 'g305=frontend;g15=/home/MSF/tmp/7;g21=/home/MSF/tmp/7/spkrdia/1/vad/speech;g20=/home/MSF/tmp/7/spkrdia/1/vad/speech;g34=/home/MSF/tmp/7/spkrdia/1/vad/speech/feats.scp;g92=0;g314=/home/vtk/conf/vtk.lic;' -cfg /home/vtk/conf/part/cts/cts.spkrdia.cfg -list /home/MSF/tmp/7/spkrdia/1/vad/speech/wav.scp -seglist /home/MSF/tmp/7/spkrdia/1/vad/speech/segments -bpath /home/vtk/bin -verbose 2 2> /home/MSF/tmp/7/spkrdia/1/vad/speech/fe.log"/>
+[2019-02-14 15:23:43 kld_frontend] extract features from wav files
+[2019-02-14 15:23:43 kld_frontend] <command name="/home/vtk/bin/kld_compute-plp-feats  --preemphasis-coefficient=0.97 --dither=0 --use-energy=false --cepstral-lifter=22 --low-freq=0 --num-ceps=12 --num-mel-bins=24 --remove-dc-offset=true --sample-frequency=16000 --high-freq=8000 --verbose=0 --frame-length=0.030 --license=/home/vtk/conf/vtk.lic  --cepstral-lifter=22 --cepstral-scale=1 --compress-factor=0.33333 --dither=0 --energy-floor=0.0 --frame-length=30 --frame-shift=10 --high-freq=3600 --htk-compat=false --low-freq=0 --lpc-order=12 --min-duration=0 --num-ceps=13 --num-mel-bins=15 --preemphasis-coefficient=0.97 --raw-energy=true --remove-dc-offset=true --round-to-power-of-two=true --sample-frequency=8000 --snip-edges=true --subtract-mean=false --use-energy=true --window-type=hamming  'ark:/home/vtk/bin/kld_extract-segments scp:/home/MSF/tmp/7/spkrdia/1/vad/speech/wav.scp /home/MSF/tmp/7/spkrdia/1/vad/speech/segments ark:- |' 'ark,scp:/home/MSF/tmp/7/spkrdia/1/vad/speech/plp.ark,/home/MSF/tmp/7/spkrdia/1/vad/speech/feats.scp'"/>
+/home/vtk/bin/kld_compute-plp-feats --preemphasis-coefficient=0.97 --dither=0 --use-energy=false --cepstral-lifter=22 --low-freq=0 --num-ceps=12 --num-mel-bins=24 --remove-dc-offset=true --sample-frequency=16000 --high-freq=8000 --verbose=0 --frame-length=0.030 --license=/home/vtk/conf/vtk.lic --cepstral-lifter=22 --cepstral-scale=1 --compress-factor=0.33333 --dither=0 --energy-floor=0.0 --frame-length=30 --frame-shift=10 --high-freq=3600 --htk-compat=false --low-freq=0 --lpc-order=12 --min-duration=0 --num-ceps=13 --num-mel-bins=15 --preemphasis-coefficient=0.97 --raw-energy=true --remove-dc-offset=true --round-to-power-of-two=true --sample-frequency=8000 --snip-edges=true --subtract-mean=false --use-energy=true --window-type=hamming 'ark:/home/vtk/bin/kld_extract-segments scp:/home/MSF/tmp/7/spkrdia/1/vad/speech/wav.scp /home/MSF/tmp/7/spkrdia/1/vad/speech/segments ark:- |' ark,scp:/home/MSF/tmp/7/spkrdia/1/vad/speech/plp.ark,/home/MSF/tmp/7/spkrdia/1/vad/speech/feats.scp 
+/home/vtk/bin/kld_extract-segments scp:/home/MSF/tmp/7/spkrdia/1/vad/speech/wav.scp /home/MSF/tmp/7/spkrdia/1/vad/speech/segments ark:- 
+LOG (kld_extract-segments[5.4.16~3-4f22]:main():extract-segments.cc:195) Successfully processed 5 lines out of 5 in the segments file. 
+LOG (kld_compute-plp-feats[5.4.16~3-4f22]:main():compute-plp-feats.cc:202)  Done 5 out of 5 utterances.
+[2019-02-14 15:23:43 vtk_kspkrdia] </frontend>
+[2019-02-14 15:23:43 vtk_kspkrdia] </data>
+[2019-02-14 15:23:43 vtk_kspkrdia] create directory '/home/MSF/tmp/7/spkrdia/1/vad/nospeech'
+[2019-02-14 15:23:44 vtk_kspkrdia] <data>
+[2019-02-14 15:23:44 vtk_kspkrdia] <command name="/home/vtk/bin/vtk_frmexport -to frm -frate 33.33 -merge -sigdur 30.73 -verbose 2 -regspkr /N\|M/ /home/MSF/tmp/7/spkrdia/1/vad.frm | /usr/bin/wc -l"/>
+regspkr=/N|M/
+[2019-02-14 15:23:44 vtk_kspkrdia] <command name="/home/vtk/bin/vtk_frmexport -to frm -frate 33.33 -merge -sigdur 30.73 -verbose 2 -regspkr /N\|M/ /home/MSF/tmp/7/spkrdia/1/vad.frm | /home/vtk/bin/vtk_frmexport -to stm -frate 33.33 -sigdur 30.73 -verbose 2 | /usr/bin/perl -ane '$F[1]=1; print qq(@F\n);' | /home/vtk/bin/vtk_stmexport -sort spkr -to stm -verbose 2"/>
+regspkr=/N|M/
+regspkr=/excluded_region|inter_segment_gap/r
+
+use the open format
+open format='%fid %chan1 %spkr %stime %etime %cond %text'
+
+[2019-02-14 15:23:44 vtk_kspkrdia] 
+[2019-02-14 15:23:44 vtk_kspkrdia] ***********
+[2019-02-14 15:23:44 vtk_kspkrdia] Export data
+[2019-02-14 15:23:44 vtk_kspkrdia] ***********
+[2019-02-14 15:23:44 vtk_kspkrdia] <exportdata>
+[2019-02-14 15:23:44 vtk_kspkrdia] <command name="/home/vtk/bin/vtk_stmexport -large -to kseg /home/MSF/tmp/7/spkrdia/1/nospeech.stm -verbose 2"/>
+regspkr=/excluded_region|inter_segment_gap/r
+
+use the open format
+open format='%spkr+%uid %fid %stime %etime %chan0'
+
+[2019-02-14 15:23:44 vtk_kspkrdia] <command name="/home/vtk/bin/vtk_stmexport -large -to utt2spkr /home/MSF/tmp/7/spkrdia/1/nospeech.stm -verbose 2"/>
+regspkr=/excluded_region|inter_segment_gap/r
+
+use the open format
+open format='%spkr+%uid %spkr'
+
+[2019-02-14 15:23:44 vtk_kspkrdia] <command name="/home/vtk/bin/vtk_stmexport -large -to spkr2utt /home/MSF/tmp/7/spkrdia/1/nospeech.stm -verbose 2"/>
+regspkr=/excluded_region|inter_segment_gap/r
+
+[2019-02-14 15:23:44 vtk_kspkrdia] <frontend>
+[2019-02-14 15:23:44 vtk_kspkrdia] <command name="/home/vtk/bin/kld_frontend -exec 'g305=frontend;g15=/home/MSF/tmp/7;g21=/home/MSF/tmp/7/spkrdia/1/vad/nospeech;g20=/home/MSF/tmp/7/spkrdia/1/vad/nospeech;g34=/home/MSF/tmp/7/spkrdia/1/vad/nospeech/feats.scp;g92=0;g314=/home/vtk/conf/vtk.lic;' -cfg /home/vtk/conf/part/cts/cts.spkrdia.cfg -list /home/MSF/tmp/7/spkrdia/1/vad/nospeech/wav.scp -seglist /home/MSF/tmp/7/spkrdia/1/vad/nospeech/segments -bpath /home/vtk/bin -verbose 2 2> /home/MSF/tmp/7/spkrdia/1/vad/nospeech/fe.log"/>
+[2019-02-14 15:23:44 kld_frontend] extract features from wav files
+[2019-02-14 15:23:44 kld_frontend] <command name="/home/vtk/bin/kld_compute-plp-feats  --preemphasis-coefficient=0.97 --dither=0 --use-energy=false --cepstral-lifter=22 --low-freq=0 --num-ceps=12 --num-mel-bins=24 --remove-dc-offset=true --sample-frequency=16000 --high-freq=8000 --verbose=0 --frame-length=0.030 --license=/home/vtk/conf/vtk.lic  --cepstral-lifter=22 --cepstral-scale=1 --compress-factor=0.33333 --dither=0 --energy-floor=0.0 --frame-length=30 --frame-shift=10 --high-freq=3600 --htk-compat=false --low-freq=0 --lpc-order=12 --min-duration=0 --num-ceps=13 --num-mel-bins=15 --preemphasis-coefficient=0.97 --raw-energy=true --remove-dc-offset=true --round-to-power-of-two=true --sample-frequency=8000 --snip-edges=true --subtract-mean=false --use-energy=true --window-type=hamming  'ark:/home/vtk/bin/kld_extract-segments scp:/home/MSF/tmp/7/spkrdia/1/vad/nospeech/wav.scp /home/MSF/tmp/7/spkrdia/1/vad/nospeech/segments ark:- |' 'ark,scp:/home/MSF/tmp/7/spkrdia/1/vad/nospeech/plp.ark,/home/MSF/tmp/7/spkrdia/1/vad/nospeech/feats.scp'"/>
+/home/vtk/bin/kld_compute-plp-feats --preemphasis-coefficient=0.97 --dither=0 --use-energy=false --cepstral-lifter=22 --low-freq=0 --num-ceps=12 --num-mel-bins=24 --remove-dc-offset=true --sample-frequency=16000 --high-freq=8000 --verbose=0 --frame-length=0.030 --license=/home/vtk/conf/vtk.lic --cepstral-lifter=22 --cepstral-scale=1 --compress-factor=0.33333 --dither=0 --energy-floor=0.0 --frame-length=30 --frame-shift=10 --high-freq=3600 --htk-compat=false --low-freq=0 --lpc-order=12 --min-duration=0 --num-ceps=13 --num-mel-bins=15 --preemphasis-coefficient=0.97 --raw-energy=true --remove-dc-offset=true --round-to-power-of-two=true --sample-frequency=8000 --snip-edges=true --subtract-mean=false --use-energy=true --window-type=hamming 'ark:/home/vtk/bin/kld_extract-segments scp:/home/MSF/tmp/7/spkrdia/1/vad/nospeech/wav.scp /home/MSF/tmp/7/spkrdia/1/vad/nospeech/segments ark:- |' ark,scp:/home/MSF/tmp/7/spkrdia/1/vad/nospeech/plp.ark,/home/MSF/tmp/7/spkrdia/1/vad/nospeech/feats.scp 
+/home/vtk/bin/kld_extract-segments scp:/home/MSF/tmp/7/spkrdia/1/vad/nospeech/wav.scp /home/MSF/tmp/7/spkrdia/1/vad/nospeech/segments ark:- 
+LOG (kld_extract-segments[5.4.16~3-4f22]:main():extract-segments.cc:195) Successfully processed 5 lines out of 5 in the segments file. 
+LOG (kld_compute-plp-feats[5.4.16~3-4f22]:main():compute-plp-feats.cc:202)  Done 5 out of 5 utterances.
+[2019-02-14 15:23:44 vtk_kspkrdia] </frontend>
+[2019-02-14 15:23:44 vtk_kspkrdia] </data>
+[2019-02-14 15:23:44 vtk_kspkrdia] 
+[2019-02-14 15:23:44 vtk_kspkrdia] ******************
+[2019-02-14 15:23:44 vtk_kspkrdia]  BIC segmentation 
+[2019-02-14 15:23:44 vtk_kspkrdia] ******************
+[2019-02-14 15:23:44 vtk_kspkrdia] <bic_segmentation>
+[2019-02-14 15:23:44 vtk_kspkrdia] <command name="/home/vtk/bin/kld_get-bic-segmentation --win-size=500 --min-size=250 'ark,s,cs:/home/vtk/bin/kld_add-deltas scp:/home/MSF/tmp/7/spkrdia/1/vad/speech/feats.scp ark:- |' ark,t:- | /home/vtk/bin/vtk_ali2frm --segments=/home/MSF/tmp/7/spkrdia/1/vad/speech/segments 2> /home/MSF/tmp/7/spkrdia/1/bic_seg.log"/>
+/home/vtk/bin/kld_get-bic-segmentation --win-size=500 --min-size=250 'ark,s,cs:/home/vtk/bin/kld_add-deltas scp:/home/MSF/tmp/7/spkrdia/1/vad/speech/feats.scp ark:- |' ark,t:- 
+/home/vtk/bin/kld_add-deltas scp:/home/MSF/tmp/7/spkrdia/1/vad/speech/feats.scp ark:- 
+[2019-02-14 15:23:44 vtk_kspkrdia] </bic_segmentation>
+[2019-02-14 15:23:44 vtk_kspkrdia] <command name="/usr/bin/perl -e 'printf qq(%.2f\n), 1/31'"/>
+[2019-02-14 15:23:44 vtk_kspkrdia] state=bicseg elapsed=1 RT=0.03
+[2019-02-14 15:23:44 vtk_kspkrdia] ==========
+[2019-02-14 15:23:44 vtk_kspkrdia] transition: bicseg -> biclinclust
+[2019-02-14 15:23:44 vtk_kspkrdia] ==========
+[2019-02-14 15:23:44 vtk_kspkrdia] create directory '/home/MSF/tmp/7/spkrdia/1/bicseg'
+[2019-02-14 15:23:44 vtk_kspkrdia] <data>
+[2019-02-14 15:23:44 vtk_kspkrdia] <command name="/home/vtk/bin/vtk_frmexport -to frm -frate 100.00 -merge -sigdur 30.73 -verbose 2 -regspkr /N\|M/r /home/MSF/tmp/7/spkrdia/1/bic_seg.frm | /usr/bin/wc -l"/>
+regspkr=/N|M/r
+[2019-02-14 15:23:44 vtk_kspkrdia] <command name="/home/vtk/bin/vtk_frmexport -to frm -frate 100.00 -merge -sigdur 30.73 -verbose 2 -regspkr /N\|M/r /home/MSF/tmp/7/spkrdia/1/bic_seg.frm | /home/vtk/bin/vtk_frmexport -to stm -frate 100.00 -sigdur 30.73 -verbose 2 | /usr/bin/perl -ane '$F[1]=1; print qq(@F\n);' | /home/vtk/bin/vtk_stmexport -sort stime -to stm -verbose 2"/>
+regspkr=/excluded_region|inter_segment_gap/r
+
+use the open format
+regspkr=/N|M/r
+open format='%fid %chan1 %spkr %stime %etime %cond %text'
+
+[2019-02-14 15:23:44 vtk_kspkrdia] 
+[2019-02-14 15:23:44 vtk_kspkrdia] ***********
+[2019-02-14 15:23:44 vtk_kspkrdia] Export data
+[2019-02-14 15:23:44 vtk_kspkrdia] ***********
+[2019-02-14 15:23:44 vtk_kspkrdia] <exportdata>
+[2019-02-14 15:23:44 vtk_kspkrdia] <command name="/home/vtk/bin/vtk_stmexport -large -to kseg /home/MSF/tmp/7/spkrdia/1/speaker.stm -verbose 2"/>
+regspkr=/excluded_region|inter_segment_gap/r
+
+use the open format
+open format='%spkr+%uid %fid %stime %etime %chan0'
+
+[2019-02-14 15:23:44 vtk_kspkrdia] <command name="/home/vtk/bin/vtk_stmexport -large -to utt2spkr /home/MSF/tmp/7/spkrdia/1/speaker.stm -verbose 2"/>
+regspkr=/excluded_region|inter_segment_gap/r
+
+use the open format
+open format='%spkr+%uid %spkr'
+
+[2019-02-14 15:23:44 vtk_kspkrdia] <command name="/home/vtk/bin/vtk_stmexport -large -to spkr2utt /home/MSF/tmp/7/spkrdia/1/speaker.stm -verbose 2"/>
+regspkr=/excluded_region|inter_segment_gap/r
+
+[2019-02-14 15:23:44 vtk_kspkrdia] <frontend>
+[2019-02-14 15:23:44 vtk_kspkrdia] <command name="/home/vtk/bin/kld_frontend -exec 'g305=frontend;g15=/home/MSF/tmp/7;g21=/home/MSF/tmp/7/spkrdia/1/bicseg;g20=/home/MSF/tmp/7/spkrdia/1/bicseg;g34=/home/MSF/tmp/7/spkrdia/1/bicseg/feats.scp;g92=0;g314=/home/vtk/conf/vtk.lic;' -cfg /home/vtk/conf/part/cts/cts.spkrdia.cfg -list /home/MSF/tmp/7/spkrdia/1/bicseg/wav.scp -seglist /home/MSF/tmp/7/spkrdia/1/bicseg/segments -bpath /home/vtk/bin -verbose 2 2> /home/MSF/tmp/7/spkrdia/1/bicseg/fe.log"/>
+[2019-02-14 15:23:44 kld_frontend] extract features from wav files
+[2019-02-14 15:23:44 kld_frontend] <command name="/home/vtk/bin/kld_compute-plp-feats  --preemphasis-coefficient=0.97 --dither=0 --use-energy=false --cepstral-lifter=22 --low-freq=0 --num-ceps=12 --num-mel-bins=24 --remove-dc-offset=true --sample-frequency=16000 --high-freq=8000 --verbose=0 --frame-length=0.030 --license=/home/vtk/conf/vtk.lic  --cepstral-lifter=22 --cepstral-scale=1 --compress-factor=0.33333 --dither=0 --energy-floor=0.0 --frame-length=30 --frame-shift=10 --high-freq=3600 --htk-compat=false --low-freq=0 --lpc-order=12 --min-duration=0 --num-ceps=13 --num-mel-bins=15 --preemphasis-coefficient=0.97 --raw-energy=true --remove-dc-offset=true --round-to-power-of-two=true --sample-frequency=8000 --snip-edges=true --subtract-mean=false --use-energy=true --window-type=hamming  'ark:/home/vtk/bin/kld_extract-segments scp:/home/MSF/tmp/7/spkrdia/1/bicseg/wav.scp /home/MSF/tmp/7/spkrdia/1/bicseg/segments ark:- |' 'ark,scp:/home/MSF/tmp/7/spkrdia/1/bicseg/plp.ark,/home/MSF/tmp/7/spkrdia/1/bicseg/feats.scp'"/>
+/home/vtk/bin/kld_compute-plp-feats --preemphasis-coefficient=0.97 --dither=0 --use-energy=false --cepstral-lifter=22 --low-freq=0 --num-ceps=12 --num-mel-bins=24 --remove-dc-offset=true --sample-frequency=16000 --high-freq=8000 --verbose=0 --frame-length=0.030 --license=/home/vtk/conf/vtk.lic --cepstral-lifter=22 --cepstral-scale=1 --compress-factor=0.33333 --dither=0 --energy-floor=0.0 --frame-length=30 --frame-shift=10 --high-freq=3600 --htk-compat=false --low-freq=0 --lpc-order=12 --min-duration=0 --num-ceps=13 --num-mel-bins=15 --preemphasis-coefficient=0.97 --raw-energy=true --remove-dc-offset=true --round-to-power-of-two=true --sample-frequency=8000 --snip-edges=true --subtract-mean=false --use-energy=true --window-type=hamming 'ark:/home/vtk/bin/kld_extract-segments scp:/home/MSF/tmp/7/spkrdia/1/bicseg/wav.scp /home/MSF/tmp/7/spkrdia/1/bicseg/segments ark:- |' ark,scp:/home/MSF/tmp/7/spkrdia/1/bicseg/plp.ark,/home/MSF/tmp/7/spkrdia/1/bicseg/feats.scp 
+/home/vtk/bin/kld_extract-segments scp:/home/MSF/tmp/7/spkrdia/1/bicseg/wav.scp /home/MSF/tmp/7/spkrdia/1/bicseg/segments ark:- 
+LOG (kld_extract-segments[5.4.16~3-4f22]:main():extract-segments.cc:195) Successfully processed 6 lines out of 6 in the segments file. 
+LOG (kld_compute-plp-feats[5.4.16~3-4f22]:main():compute-plp-feats.cc:202)  Done 6 out of 6 utterances.
+[2019-02-14 15:23:44 vtk_kspkrdia] </frontend>
+[2019-02-14 15:23:44 vtk_kspkrdia] </data>
+[2019-02-14 15:23:44 vtk_kspkrdia] 
+[2019-02-14 15:23:44 vtk_kspkrdia] ***********************
+[2019-02-14 15:23:44 vtk_kspkrdia]  BIC linear clustering 
+[2019-02-14 15:23:44 vtk_kspkrdia] ***********************
+[2019-02-14 15:23:44 vtk_kspkrdia] <bic_linear_clustering>
+[2019-02-14 15:23:44 vtk_kspkrdia] <command name="/home/vtk/bin/kld_get-bic-linear-clustering --min-clust=2 --lambda=1.50 'ark,s,cs:/home/vtk/bin/kld_add-deltas scp:/home/MSF/tmp/7/spkrdia/1/bicseg/feats.scp ark:- |' 'ark,t:/home/MSF/tmp/7/spkrdia/1/bic_linear_clust.map' 2> /home/MSF/tmp/7/spkrdia/1/bic_linear_clust.log"/>
+/home/vtk/bin/kld_get-bic-linear-clustering --min-clust=2 --lambda=1.50 'ark,s,cs:/home/vtk/bin/kld_add-deltas scp:/home/MSF/tmp/7/spkrdia/1/bicseg/feats.scp ark:- |' ark,t:/home/MSF/tmp/7/spkrdia/1/bic_linear_clust.map 
+/home/vtk/bin/kld_add-deltas scp:/home/MSF/tmp/7/spkrdia/1/bicseg/feats.scp ark:- 
+/home/vtk/bin/kld_add-deltas scp:/home/MSF/tmp/7/spkrdia/1/bicseg/feats.scp ark:- 
+[2019-02-14 15:23:44 vtk_kspkrdia] </bic_linear_clustering>
+[2019-02-14 15:23:44 vtk_kspkrdia] <command name="/usr/bin/perl -e 'printf qq(%.2f\n), 0/31'"/>
+[2019-02-14 15:23:44 vtk_kspkrdia] state=biclinclust elapsed=0 RT=0.00
+[2019-02-14 15:23:44 vtk_kspkrdia] ==========
+[2019-02-14 15:23:44 vtk_kspkrdia] transition: biclinclust -> bichacclust
+[2019-02-14 15:23:44 vtk_kspkrdia] ==========
+[2019-02-14 15:23:44 vtk_kspkrdia] create directory '/home/MSF/tmp/7/spkrdia/1/biclinclust'
+[2019-02-14 15:23:44 vtk_kspkrdia] <command name="/home/vtk/bin/vtk_diar2map /home/MSF/tmp/7/spkrdia/1/bic_linear_clust.map /home/MSF/tmp/7/spkrdia/1/biclinclust/utt_map /home/MSF/tmp/7/spkrdia/1/biclinclust/spk_map"/>
+[2019-02-14 15:23:44 vtk_kspkrdia] <command name="/usr/bin/cat /home/MSF/tmp/7/spkrdia/1/bicseg/utt2spk | /home/vtk/bin/kld_apply_map -f 1 /home/MSF/tmp/7/spkrdia/1/biclinclust/utt_map | /home/vtk/bin/kld_apply_map -f 2 /home/MSF/tmp/7/spkrdia/1/biclinclust/spk_map | /usr/bin/sort"/>
+[2019-02-14 15:23:45 vtk_kspkrdia] <command name="/home/vtk/bin/kld_scp spk2utt /home/MSF/tmp/7/spkrdia/1/biclinclust/utt2spk /home/MSF/tmp/7/spkrdia/1/biclinclust/spk2utt"/>
+[2019-02-14 15:23:45 vtk_kspkrdia] <command name="/home/vtk/bin/kld_apply_map -f 1 /home/MSF/tmp/7/spkrdia/1/biclinclust/utt_map < /home/MSF/tmp/7/spkrdia/1/bicseg/feats.scp | /usr/bin/sort"/>
+[2019-02-14 15:23:45 vtk_kspkrdia] <command name="/home/vtk/bin/kld_apply_map -f 1 /home/MSF/tmp/7/spkrdia/1/biclinclust/utt_map < /home/MSF/tmp/7/spkrdia/1/bicseg/segments | /usr/bin/sort"/>
+[2019-02-14 15:23:45 vtk_kspkrdia] <command name="/usr/bin/cp /home/MSF/tmp/7/spkrdia/1/bicseg/wav.scp /home/MSF/tmp/7/spkrdia/1/biclinclust"/>
+[2019-02-14 15:23:45 vtk_kspkrdia] <command name="/usr/bin/cp /home/MSF/tmp/7/spkrdia/1/bicseg/reco2file_and_channel /home/MSF/tmp/7/spkrdia/1/biclinclust"/>
+[2019-02-14 15:23:45 vtk_kspkrdia] copied data from /home/MSF/tmp/7/spkrdia/1/bicseg to /home/MSF/tmp/7/spkrdia/1/biclinclust
+[2019-02-14 15:23:45 vtk_kspkrdia] 
+[2019-02-14 15:23:45 vtk_kspkrdia] ********************
+[2019-02-14 15:23:45 vtk_kspkrdia]  BIC HAC Clustering 
+[2019-02-14 15:23:45 vtk_kspkrdia] ********************
+[2019-02-14 15:23:45 vtk_kspkrdia] <bic_hac_clustering>
+[2019-02-14 15:23:45 vtk_kspkrdia] <command name="/home/vtk/bin/kld_feat-to-dim 'ark,s,cs:/home/vtk/bin/kld_add-deltas scp:/home/MSF/tmp/7/spkrdia/1/biclinclust/feats.scp ark:- |' - 2> /dev/null"/>
+[2019-02-14 15:23:45 vtk_kspkrdia] <command name="/home/vtk/bin/kld_get-bic-hac-clustering --min-clust=2 --max-merge-thresh=0 --lambda=10 --dim=39 'ark,t:/home/MSF/tmp/7/spkrdia/1/biclinclust/spk2utt' 'ark,s,cs:/home/vtk/bin/kld_add-deltas scp:/home/MSF/tmp/7/spkrdia/1/biclinclust/feats.scp ark:- |' 'ark,t:/home/MSF/tmp/7/spkrdia/1/bic_hac_clust.map' 2> /home/MSF/tmp/7/spkrdia/1/bic_hac_clust.log"/>
+/home/vtk/bin/kld_get-bic-hac-clustering --min-clust=2 --max-merge-thresh=0 --lambda=10 --dim=39 ark,t:/home/MSF/tmp/7/spkrdia/1/biclinclust/spk2utt 'ark,s,cs:/home/vtk/bin/kld_add-deltas scp:/home/MSF/tmp/7/spkrdia/1/biclinclust/feats.scp ark:- |' ark,t:/home/MSF/tmp/7/spkrdia/1/bic_hac_clust.map 
+/home/vtk/bin/kld_add-deltas scp:/home/MSF/tmp/7/spkrdia/1/biclinclust/feats.scp ark:- 
+[2019-02-14 15:23:45 vtk_kspkrdia] </bic_hac_clustering>
+[2019-02-14 15:23:45 vtk_kspkrdia] <command name="/usr/bin/perl -e 'printf qq(%.2f\n), 1/31'"/>
+[2019-02-14 15:23:45 vtk_kspkrdia] state=bichacclust elapsed=1 RT=0.03
+[2019-02-14 15:23:45 vtk_kspkrdia] ==========
+[2019-02-14 15:23:45 vtk_kspkrdia] transition: bichacclust -> spkrdec
+[2019-02-14 15:23:45 vtk_kspkrdia] ==========
+[2019-02-14 15:23:45 vtk_kspkrdia] for spkeaker decoding, apply cmvn is false
+[2019-02-14 15:23:45 vtk_kspkrdia] create directory '/home/MSF/tmp/7/spkrdia/1/bichacclust'
+[2019-02-14 15:23:45 vtk_kspkrdia] <command name="/home/vtk/bin/vtk_diar2map /home/MSF/tmp/7/spkrdia/1/bic_hac_clust.map /home/MSF/tmp/7/spkrdia/1/bichacclust/utt_map /home/MSF/tmp/7/spkrdia/1/bichacclust/spk_map"/>
+[2019-02-14 15:23:45 vtk_kspkrdia] <command name="/usr/bin/cat /home/MSF/tmp/7/spkrdia/1/biclinclust/utt2spk | /home/vtk/bin/kld_apply_map -f 1 /home/MSF/tmp/7/spkrdia/1/bichacclust/utt_map | /home/vtk/bin/kld_apply_map -f 2 /home/MSF/tmp/7/spkrdia/1/bichacclust/spk_map | /usr/bin/sort"/>
+[2019-02-14 15:23:45 vtk_kspkrdia] <command name="/home/vtk/bin/kld_scp spk2utt /home/MSF/tmp/7/spkrdia/1/bichacclust/utt2spk /home/MSF/tmp/7/spkrdia/1/bichacclust/spk2utt"/>
+[2019-02-14 15:23:45 vtk_kspkrdia] <command name="/home/vtk/bin/kld_apply_map -f 1 /home/MSF/tmp/7/spkrdia/1/bichacclust/utt_map < /home/MSF/tmp/7/spkrdia/1/biclinclust/feats.scp | /usr/bin/sort"/>
+[2019-02-14 15:23:45 vtk_kspkrdia] <command name="/home/vtk/bin/kld_apply_map -f 1 /home/MSF/tmp/7/spkrdia/1/bichacclust/utt_map < /home/MSF/tmp/7/spkrdia/1/biclinclust/segments | /usr/bin/sort"/>
+[2019-02-14 15:23:45 vtk_kspkrdia] <command name="/usr/bin/cp /home/MSF/tmp/7/spkrdia/1/biclinclust/wav.scp /home/MSF/tmp/7/spkrdia/1/bichacclust"/>
+[2019-02-14 15:23:45 vtk_kspkrdia] <command name="/usr/bin/cp /home/MSF/tmp/7/spkrdia/1/biclinclust/reco2file_and_channel /home/MSF/tmp/7/spkrdia/1/bichacclust"/>
+[2019-02-14 15:23:45 vtk_kspkrdia] copied data from /home/MSF/tmp/7/spkrdia/1/biclinclust to /home/MSF/tmp/7/spkrdia/1/bichacclust
+[2019-02-14 15:23:45 vtk_kspkrdia] 
+[2019-02-14 15:23:45 vtk_kspkrdia] *******************
+[2019-02-14 15:23:45 vtk_kspkrdia]  Build Silence GMM 
+[2019-02-14 15:23:45 vtk_kspkrdia] *******************
+[2019-02-14 15:23:45 vtk_kspkrdia] <gmm_silence>
+[2019-02-14 15:23:45 vtk_kspkrdia] <command name="/home/vtk/bin/kld_copy-feats --write-num-frames=ark,t:/home/MSF/tmp/7/spkrdia/1/utt2nframes scp:/home/MSF/tmp/7/spkrdia/1/vad/nospeech/feats.scp ark:- >& /dev/null"/>
+[2019-02-14 15:23:45 vtk_kspkrdia] num_frames eq 647
+[2019-02-14 15:23:45 vtk_kspkrdia] <command name="/home/vtk/bin/kld_gmm-global-init-from-feats --apply-var-floor=true --binary=false --num-iters=65 --num-gauss-init=1 --num-gauss=64 'ark,s,cs:/home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 scp:/home/MSF/tmp/7/spkrdia/1/vad/nospeech/feats.scp ark:- |' /home/MSF/tmp/7/spkrdia/1/silence.mdl 2> /home/MSF/tmp/7/spkrdia/1/build_gmm_from_feats.silence.log"/>
+[2019-02-14 15:23:45 vtk_kspkrdia] /home/MSF/tmp/7/spkrdia/1/build_gmm_from_feats.silence.log: 0 errors, 532 warnings, 0 fatals
+[2019-02-14 15:23:45 vtk_kspkrdia] </gmm_silence>
+[2019-02-14 15:23:45 vtk_kspkrdia] 
+[2019-02-14 15:23:45 vtk_kspkrdia] ***********************
+[2019-02-14 15:23:45 vtk_kspkrdia]  Build GMM per speaker 
+[2019-02-14 15:23:45 vtk_kspkrdia] ***********************
+[2019-02-14 15:23:45 vtk_kspkrdia] <gmm_per_speaker>
+[2019-02-14 15:23:45 vtk_kspkrdia] train 2 speakers
+[2019-02-14 15:23:45 vtk_kspkrdia] <command name="/home/vtk/bin/kld_scp splitspk /home/MSF/tmp/7/spkrdia/1/bichacclust/feats.scp /home/MSF/tmp/7/spkrdia/1/bichacclust/utt2spk /home/MSF/tmp/7/spkrdia/1/bichacclust/feats.1.scp /home/MSF/tmp/7/spkrdia/1/bichacclust/feats.2.scp"/>
+[2019-02-14 15:23:46 vtk_kspkrdia] <command name="/home/vtk/bin/kld_gmm-global-init-from-feats --apply-var-floor=true --binary=false --num-iters=65 --num-gauss-init=1 --num-gauss=64 'ark,s,cs:/home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 scp:/home/MSF/tmp/7/spkrdia/1/bichacclust/feats.1.scp ark:- |' /home/MSF/tmp/7/spkrdia/1/1.mdl 2> /home/MSF/tmp/7/spkrdia/1/build_gmm_from_feats.1.log"/>
+[2019-02-14 15:23:46 vtk_kspkrdia] /home/MSF/tmp/7/spkrdia/1/build_gmm_from_feats.1.log: 0 errors, 1 warnings, 0 fatals
+[2019-02-14 15:23:46 vtk_kspkrdia] <command name="/home/vtk/bin/kld_gmm-global-init-from-feats --apply-var-floor=true --binary=false --num-iters=65 --num-gauss-init=1 --num-gauss=64 'ark,s,cs:/home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 scp:/home/MSF/tmp/7/spkrdia/1/bichacclust/feats.2.scp ark:- |' /home/MSF/tmp/7/spkrdia/1/2.mdl 2> /home/MSF/tmp/7/spkrdia/1/build_gmm_from_feats.2.log"/>
+[2019-02-14 15:23:46 vtk_kspkrdia] /home/MSF/tmp/7/spkrdia/1/build_gmm_from_feats.2.log: 0 errors, 1537 warnings, 0 fatals
+[2019-02-14 15:23:46 vtk_kspkrdia] </gmm_per_speaker>
+[2019-02-14 15:23:46 vtk_kspkrdia] 
+[2019-02-14 15:23:46 vtk_kspkrdia] ***********
+[2019-02-14 15:23:46 vtk_kspkrdia]  Build FST 
+[2019-02-14 15:23:46 vtk_kspkrdia] ***********
+[2019-02-14 15:23:46 vtk_kspkrdia] <build_fst>
+[2019-02-14 15:23:46 vtk_kspkrdia] <command name="/home/vtk/bin/kld_build_diar_graph -exec 'g305=buildfst' -overwrite -cfg /home/vtk/conf/part/cts/cts.spkrdia.cfg -bpath /home/vtk/bin -log /home/MSF/tmp/7/spkrdia/1/build_fst.log -verbose 2 -wpath /home/MSF/tmp/7/spkrdia/1 /home/MSF/tmp/7/spkrdia/1/silence.mdl /home/MSF/tmp/7/spkrdia/1/spkr_models_list /home/MSF/tmp/7/spkrdia/1/sprkdec.words.sym /home/MSF/tmp/7/spkrdia/1/spkrdec.mdl /home/MSF/tmp/7/spkrdia/1/hclg.spkrdec.fst"/>
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] working-dir: /home/MSF/tmp/7/spkrdia/1
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] start of building FST, kld_buildgraph_for_diar 1.0 running on localhost
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] <command name="/usr/bin/cat /home/MSF/tmp/7/spkrdia/1/spkr_models_list"/>
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] <command name="/home/vtk/bin/kld_gmm-global-info /home/MSF/tmp/7/spkrdia/1/silence.mdl | /usr/bin/perl -ne 'print $1 if /feature dimension (\d+)/'"/>
+/home/vtk/bin/kld_gmm-global-info /home/MSF/tmp/7/spkrdia/1/silence.mdl 
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] 
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] *********************************
+[2019-02-14 15:23:46 kld_buildgraph_for_diar]  Produce phones, words, topology 
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] *********************************
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] <misc>
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] Create phones/words symbol table
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] <command name="/usr/bin/perl -e 'print qq(1).qq(\n)'"/>
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] <command name="/usr/bin/perl -e '$n=shift(@ARGV); for $x19 (2..$n+1) {print qq($x19).qq(\n)}' 2"/>
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] <command name="/usr/bin/cat /home/MSF/tmp/7/spkrdia/1/{silence,nonsilence}.txt | /usr/bin/perl -lpe '$_ = $_." ".($.)'"/>
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] <command name="/usr/bin/cp /home/MSF/tmp/7/spkrdia/1/phones.txt /home/MSF/tmp/7/spkrdia/1/words.txt"/>
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] Create topology file
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] <command name="/home/vtk/bin/kld_symb2int /home/MSF/tmp/7/spkrdia/1/phones.txt < /home/MSF/tmp/7/spkrdia/1/silence.txt"/>
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] <command name="/usr/bin/cat /home/MSF/tmp/7/spkrdia/1/silence.int | /usr/bin/perl -ane 'print qq(:).$F[0]; END{ print qq(\n)}' | /usr/bin/perl -pne 's/^://g;'"/>
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] <command name="/home/vtk/bin/kld_symb2int /home/MSF/tmp/7/spkrdia/1/phones.txt < /home/MSF/tmp/7/spkrdia/1/nonsilence.txt"/>
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] <command name="/usr/bin/cat /home/MSF/tmp/7/spkrdia/1/nonsilence.int | /usr/bin/perl -ane 'print qq(:).$F[0]; END{ print qq(\n)}' | /usr/bin/perl -pne 's/^://g;'"/>
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] <command name="/usr/bin/cat /home/MSF/tmp/7/spkrdia/1/nonsilence.csl"/>
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] <command name="/usr/bin/cat /home/MSF/tmp/7/spkrdia/1/silence.csl"/>
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] <command name="/home/vtk/bin/kld_gen_topo_diar 250 10 2:3 1"/>
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] </misc>
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] 
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] *************************
+[2019-02-14 15:23:46 kld_buildgraph_for_diar]  Produce the grammar FST 
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] *************************
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] <grammarfst>
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] <command name="/usr/bin/perl -e '$t=shift(@ARGV); $n=shift(@ARGV);
+print qq(0 0 1 1 ). -log(1/($t+$n+1)) . qq(\n);
+for $x19 (2..$n+1) { print qq(0 1 $x19 $x19 ).-log($t/($t+$n+1)).qq(\n);
+print qq(1 0 $x19 $x19 ).-log($t/($t+$n+1)). qq(\n);
+}; print qq(0 ).-log(1/($t+$n+1))' 1 2 | /home/vtk/bin/fstcompile --isymbols=/home/MSF/tmp/7/spkrdia/1/words.txt --osymbols=/home/MSF/tmp/7/spkrdia/1/words.txt --keep_isymbols=false --keep_osymbols=false"/>
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] </grammarfst>
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] <command name="/home/vtk/bin/kld_gmm-init-mono /home/MSF/tmp/7/spkrdia/1/topo 39 /home/MSF/tmp/7/spkrdia/1/trans.bin.mdl /home/MSF/tmp/7/spkrdia/1/tree"/>
+/home/vtk/bin/kld_gmm-init-mono /home/MSF/tmp/7/spkrdia/1/topo 39 /home/MSF/tmp/7/spkrdia/1/trans.bin.mdl /home/MSF/tmp/7/spkrdia/1/tree 
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] <command name="/home/vtk/bin/kld_copy-transition-model --binary=false /home/MSF/tmp/7/spkrdia/1/trans.bin.mdl /home/MSF/tmp/7/spkrdia/1/trans.mdl"/>
+/home/vtk/bin/kld_copy-transition-model --binary=false /home/MSF/tmp/7/spkrdia/1/trans.bin.mdl /home/MSF/tmp/7/spkrdia/1/trans.mdl 
+LOG (kld_copy-transition-model[5.4.16~3-4f22]:main():copy-transition-model.cc:62) Copied transition model.
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] 
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] *********************************
+[2019-02-14 15:23:46 kld_buildgraph_for_diar]  Produce the acoustic model file 
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] *********************************
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] <acousticmdl>
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] <command name="/usr/bin/cat /home/MSF/tmp/7/spkrdia/1/trans.mdl; echo "<DIMENSION> 39 <NUMPDFS> 3";"/>
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] <command name="/home/vtk/bin/kld_gmm-global-copy --binary=false /home/MSF/tmp/7/spkrdia/1/silence.mdl -"/>
+/home/vtk/bin/kld_gmm-global-copy --binary=false /home/MSF/tmp/7/spkrdia/1/silence.mdl - 
+LOG (kld_gmm-global-copy[5.4.16~3-4f22]:main():gmm-global-copy.cc:56) Written model to -
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] <command name="/home/vtk/bin/kld_gmm-global-copy --binary=false /home/MSF/tmp/7/spkrdia/1/1.mdl -"/>
+/home/vtk/bin/kld_gmm-global-copy --binary=false /home/MSF/tmp/7/spkrdia/1/1.mdl - 
+LOG (kld_gmm-global-copy[5.4.16~3-4f22]:main():gmm-global-copy.cc:56) Written model to -
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] <command name="/home/vtk/bin/kld_gmm-global-copy --binary=false /home/MSF/tmp/7/spkrdia/1/2.mdl -"/>
+/home/vtk/bin/kld_gmm-global-copy --binary=false /home/MSF/tmp/7/spkrdia/1/2.mdl - 
+LOG (kld_gmm-global-copy[5.4.16~3-4f22]:main():gmm-global-copy.cc:56) Written model to -
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] <command name="/home/vtk/bin/kld_gmm-copy /home/MSF/tmp/7/spkrdia/1/init.txt /home/MSF/tmp/7/spkrdia/1/init.mdl"/>
+/home/vtk/bin/kld_gmm-copy /home/MSF/tmp/7/spkrdia/1/init.txt /home/MSF/tmp/7/spkrdia/1/init.mdl 
+LOG (kld_gmm-copy[5.4.16~3-4f22]:main():gmm-copy.cc:75) Written model to /home/MSF/tmp/7/spkrdia/1/init.mdl
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] </acousticmdl>
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] 
+[2019-02-14 15:23:46 kld_buildgraph_for_diar] *************************
+[2019-02-14 15:23:47 kld_buildgraph_for_diar]  Produce the context FST 
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] *************************
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] <contextfst>
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] <command name="/home/vtk/bin/kld_fstcomposecontext --context-size=1 --central-position=0 /home/MSF/tmp/7/spkrdia/1/ilabels < /home/MSF/tmp/7/spkrdia/1/G.fst | /home/vtk/bin/fstarcsort --sort_type=ilabel "/>
+/home/vtk/bin/kld_fstcomposecontext --context-size=1 --central-position=0 /home/MSF/tmp/7/spkrdia/1/ilabels 
+WARNING (kld_fstcomposecontext[5.4.16~3-4f22]:main():fstcomposecontext.cc:130) Disambiguation symbols list is empty; this likely indicates an error in data preparation.
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] Context FST done
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] </contextfst>
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] 
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] *********************
+[2019-02-14 15:23:47 kld_buildgraph_for_diar]  Produce the HMM FST 
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] *********************
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] <hmmfst>
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] <command name="/home/vtk/bin/kld_make-h-transducer --disambig-syms-out=/home/MSF/tmp/7/spkrdia/1/disambig_tid.int --transition-scale=1.0 /home/MSF/tmp/7/spkrdia/1/ilabels /home/MSF/tmp/7/spkrdia/1/tree /home/MSF/tmp/7/spkrdia/1/init.mdl"/>
+/home/vtk/bin/kld_make-h-transducer --disambig-syms-out=/home/MSF/tmp/7/spkrdia/1/disambig_tid.int --transition-scale=1.0 /home/MSF/tmp/7/spkrdia/1/ilabels /home/MSF/tmp/7/spkrdia/1/tree /home/MSF/tmp/7/spkrdia/1/init.mdl 
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] HMM FST done
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] </hmmfst>
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] 
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] ***********************
+[2019-02-14 15:23:47 kld_buildgraph_for_diar]  Produce the final FST 
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] ***********************
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] <finalfst>
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] <command name="/home/vtk/bin/kld_fsttablecompose /home/MSF/tmp/7/spkrdia/1/H.fst /home/MSF/tmp/7/spkrdia/1/CLG.fst | /home/vtk/bin/kld_fstdeterminizestar --use-log=true | /home/vtk/bin/kld_fstrmsymbols /home/MSF/tmp/7/spkrdia/1/disambig_tid.int | /home/vtk/bin/kld_fstrmepslocal | /home/vtk/bin/kld_fstminimizeencoded"/>
+/home/vtk/bin/kld_fsttablecompose /home/MSF/tmp/7/spkrdia/1/H.fst /home/MSF/tmp/7/spkrdia/1/CLG.fst 
+/home/vtk/bin/kld_fstrmepslocal 
+/home/vtk/bin/kld_fstrmsymbols /home/MSF/tmp/7/spkrdia/1/disambig_tid.int 
+/home/vtk/bin/kld_fstdeterminizestar --use-log=true 
+/home/vtk/bin/kld_fstminimizeencoded 
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] <command name="/home/vtk/bin/kld_add-self-loops --self-loop-scale=0.1 --reorder=true /home/MSF/tmp/7/spkrdia/1/init.mdl /home/MSF/tmp/7/spkrdia/1/HCLGa.fst"/>
+/home/vtk/bin/kld_add-self-loops --self-loop-scale=0.1 --reorder=true /home/MSF/tmp/7/spkrdia/1/init.mdl /home/MSF/tmp/7/spkrdia/1/HCLGa.fst 
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] <command name="/home/vtk/bin/fstconvert --fst_type=const --fst_align=true /home/MSF/tmp/7/spkrdia/1/HCLG_v.fst /home/MSF/tmp/7/spkrdia/1/HCLG.fst"/>
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] Final FST done
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] </finalfst>
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] Copy resulting files '/home/MSF/tmp/7/spkrdia/1/sprkdec.words.sym', '/home/MSF/tmp/7/spkrdia/1/spkrdec.mdl', '/home/MSF/tmp/7/spkrdia/1/hclg.spkrdec.fst'
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] <command name="/usr/bin/cp /home/MSF/tmp/7/spkrdia/1/words.txt /home/MSF/tmp/7/spkrdia/1/sprkdec.words.sym"/>
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] <command name="/usr/bin/cp /home/MSF/tmp/7/spkrdia/1/init.mdl /home/MSF/tmp/7/spkrdia/1/spkrdec.mdl"/>
+[2019-02-14 15:23:47 kld_buildgraph_for_diar] <command name="/usr/bin/cp /home/MSF/tmp/7/spkrdia/1/HCLG.fst /home/MSF/tmp/7/spkrdia/1/hclg.spkrdec.fst"/>
+[2019-02-14 15:23:47 vtk_kspkrdia] </build_fst>
+[2019-02-14 15:23:47 vtk_kspkrdia] 
+[2019-02-14 15:23:47 vtk_kspkrdia] ************
+[2019-02-14 15:23:47 vtk_kspkrdia] Decoding
+[2019-02-14 15:23:47 vtk_kspkrdia] ************
+[2019-02-14 15:23:47 vtk_kspkrdia] <decoding>
+[2019-02-14 15:23:47 vtk_kspkrdia] <command name="/usr/bin/perl -ane 'if ($F[0] == 1) {$F[0]=N} else {$F[0]=$F[0]-1} print qq(@F).qq(\n)' /home/MSF/tmp/7/spkrdia/1/sprkdec.words.sym"/>
+[2019-02-14 15:23:47 vtk_kspkrdia] <command name="/home/vtk/bin/kld_gmm_decode -exec 'g305=decode_spkr;g117=cts;g254=/home/MSF/tmp/7/spkrdia/1/spkrdec.mdl;g251=/home/MSF/tmp/7/spkrdia/1/hclg.spkrdec.fst;g264=/home/MSF/tmp/7/spkrdia/1/sprkdec_conv.words.sym;g372=/home/MSF/tmp/7/spkrdia/1/vad/speech/segments;g21=/home/MSF/tmp/7/spkrdia/1;g20=/home/MSF/tmp/7/spkrdia/1;g279=frm;g34=/home/MSF/tmp/7/spkrdia/1/speaker_dec.frm;g92=1;' -cfg /home/vtk/conf/part/cts/cts.spkrdia.cfg -list /home/MSF/tmp/7/spkrdia/1/vad/speech/feats.scp -bpath /home/vtk/bin -log /home/MSF/tmp/7/spkrdia/1/spkr_decode.log -error /home/MSF/tmp/7/spkrdia/1/spkr_decode.err.log -verbose 2"/>
+[2019-02-14 15:23:47 kld_gmm_decode] <command name="/usr/bin/rm -f /home/MSF/tmp/7/spkrdia/1/spkr_decode.err.log"/>
+[2019-02-14 15:23:47 kld_gmm_decode] load proc.sh functions
+[2019-02-14 15:23:47 kld_gmm_decode] u8 proc_job
+proc_job=/home/vtk/bin/proc_job
+
+/home/vtk/bin/proc.sh proc 1.0
+
+[2019-02-14 15:23:47 kld_gmm_decode] u7 kill
+[2019-02-14 15:23:47 kld_gmm_decode] start decoding
+[2019-02-14 15:23:47 kld_gmm_decode] <command name="/home/vtk/bin/kld_scp split /home/MSF/tmp/7/spkrdia/1/vad/speech/feats.scp  /home/MSF/tmp/7/spkrdia/1/feat.0.scp"/>
+[2019-02-14 15:23:47 kld_gmm_decode] start  jobs
+[2019-02-14 15:23:47 kld_gmm_decode] option_job is --acoustic-scale=0.15 --allow-partial=true --beam=20 --max-active=200 --min-active=1   /home/MSF/tmp/7/spkrdia/1/spkrdec.mdl /home/MSF/tmp/7/spkrdia/1/hclg.spkrdec.fst 'ark,s,cs:/home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 scp:/home/MSF/tmp/7/spkrdia/1/feat.0.scp ark:- |' 'ark:/dev/null' 'ark,t:-' | /home/vtk/bin/kld_ali-to-pdf /home/MSF/tmp/7/spkrdia/1/spkrdec.mdl ark:- ark,t:- | /home/vtk/bin/vtk_ali2frm --segments /home/MSF/tmp/7/spkrdia/1/vad/speech/segments | /home/vtk/bin/kld_int2symb -f 4 /home/MSF/tmp/7/spkrdia/1/sprkdec_conv.words.sym > /home/MSF/tmp/7/spkrdia/1/out.0.txt
+[2019-02-14 15:23:47 kld_gmm_decode] joblist='18052'
+[2019-02-14 15:23:47 kld_gmm_decode] waiting job= 18052
+[2019-02-14 15:23:47 kld_gmm_decode] logfiles:/home/MSF/tmp/7/spkrdia/1/18052.log
+[2019-02-14 15:23:47 kld_gmm_decode] wait for 1 jobs: 18052
+/home/vtk/bin/kld_gmm-decode-faster --acoustic-scale=0.15 --allow-partial=true --beam=20 --max-active=200 --min-active=1 /home/MSF/tmp/7/spkrdia/1/spkrdec.mdl /home/MSF/tmp/7/spkrdia/1/hclg.spkrdec.fst 'ark,s,cs:/home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 scp:/home/MSF/tmp/7/spkrdia/1/feat.0.scp ark:- |' 'ark:/dev/null' 'ark,t:-' | /home/vtk/bin/kld_ali-to-pdf /home/MSF/tmp/7/spkrdia/1/spkrdec.mdl ark:- ark,t:- | /home/vtk/bin/vtk_ali2frm --segments /home/MSF/tmp/7/spkrdia/1/vad/speech/segments | /home/vtk/bin/kld_int2symb -f 4 /home/MSF/tmp/7/spkrdia/1/sprkdec_conv.words.sym > /home/MSF/tmp/7/spkrdia/1/out.0.txt
+[2019-02-14 15:23:49 kld_gmm_decode] all jobs finished
+[2019-02-14 15:23:49 kld_gmm_decode] elapsed time=0:00:02
+[2019-02-14 15:23:49 kld_gmm_decode] <command name="/usr/bin/cat /home/MSF/tmp/7/spkrdia/1/out.0.txt"/>
+[2019-02-14 15:23:49 kld_gmm_decode] <command name="/usr/bin/rm /home/MSF/tmp/7/spkrdia/1/feat.0.scp"/>
+[2019-02-14 15:23:49 kld_gmm_decode] <command name="/usr/bin/rm /home/MSF/tmp/7/spkrdia/1/out.0.txt"/>
+[2019-02-14 15:23:49 kld_gmm_decode] reporting of job '18052'
+[2019-02-14 15:23:49 kld_gmm_decode] total: 0 errors, 0 warnings, 0 fatals
+[2019-02-14 15:23:49 kld_gmm_decode] /home/MSF/tmp/7/spkrdia/1/18052.log
+[2019-02-14 15:23:49 kld_gmm_decode] /home/MSF/tmp/7/spkrdia/1/18052.log: 0 errors, 3 warnings, 0 fatals
+[2019-02-14 15:23:49 kld_gmm_decode] <command name="/usr/bin/cat /home/MSF/tmp/7/spkrdia/1/18052.log"/>
+[2019-02-14 15:23:47 process_job]
+#command='/home/vtk/bin/kld_gmm-decode-faster'
+#Process informations:
+#jobid=18052
+#hostname=localhost
+
+/home/vtk/bin/kld_gmm-decode-faster --acoustic-scale=0.15 --allow-partial=true --beam=20 --max-active=200 --min-active=1 /home/MSF/tmp/7/spkrdia/1/spkrdec.mdl /home/MSF/tmp/7/spkrdia/1/hclg.spkrdec.fst 'ark,s,cs:/home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 scp:/home/MSF/tmp/7/spkrdia/1/feat.0.scp ark:- |' 'ark:/dev/null' 'ark,t:-' | /home/vtk/bin/kld_ali-to-pdf /home/MSF/tmp/7/spkrdia/1/spkrdec.mdl ark:- ark,t:- | /home/vtk/bin/vtk_ali2frm --segments /home/MSF/tmp/7/spkrdia/1/vad/speech/segments | /home/vtk/bin/kld_int2symb -f 4 /home/MSF/tmp/7/spkrdia/1/sprkdec_conv.words.sym > /home/MSF/tmp/7/spkrdia/1/out.0.txt
+/home/vtk/bin/kld_ali-to-pdf /home/MSF/tmp/7/spkrdia/1/spkrdec.mdl ark:- ark,t:- 
+/home/vtk/bin/kld_gmm-decode-faster --acoustic-scale=0.15 --allow-partial=true --beam=20 --max-active=200 --min-active=1 /home/MSF/tmp/7/spkrdia/1/spkrdec.mdl /home/MSF/tmp/7/spkrdia/1/hclg.spkrdec.fst 'ark,s,cs:/home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 scp:/home/MSF/tmp/7/spkrdia/1/feat.0.scp ark:- |' ark:/dev/null ark,t:- 
+/home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 scp:/home/MSF/tmp/7/spkrdia/1/feat.0.scp ark:- 
+LOG (kld_gmm-decode-faster[5.4.16~3-4f22]:main():gmm-decode-faster.cc:196) Log-like per frame for utterance ifile_S+00000-000_00009-240_1 is 5.86981 over 922 frames.
+LOG (kld_gmm-decode-faster[5.4.16~3-4f22]:main():gmm-decode-faster.cc:196) Log-like per frame for utterance ifile_S+00010-410_00018-540_1 is 5.57269 over 811 frames.
+WARNING (kld_gmm-decode-faster[5.4.16~3-4f22]:main():gmm-decode-faster.cc:160) Decoder did not reach end-state, outputting partial traceback since --allow-partial=true
+LOG (kld_gmm-decode-faster[5.4.16~3-4f22]:main():gmm-decode-faster.cc:196) Log-like per frame for utterance ifile_S+00020-040_00021-330_1 is 5.18806 over 127 frames.
+WARNING (kld_gmm-decode-faster[5.4.16~3-4f22]:main():gmm-decode-faster.cc:160) Decoder did not reach end-state, outputting partial traceback since --allow-partial=true
+LOG (kld_gmm-decode-faster[5.4.16~3-4f22]:main():gmm-decode-faster.cc:196) Log-like per frame for utterance ifile_S+00022-770_00025-080_1 is 5.51972 over 229 frames.
+WARNING (kld_gmm-decode-faster[5.4.16~3-4f22]:main():gmm-decode-faster.cc:160) Decoder did not reach end-state, outputting partial traceback since --allow-partial=true
+LOG (kld_gmm-decode-faster[5.4.16~3-4f22]:main():gmm-decode-faster.cc:196) Log-like per frame for utterance ifile_S+00026-370_00029-520_1 is 4.31998 over 313 frames.
+LOG (kld_gmm-decode-faster[5.4.16~3-4f22]:main():gmm-decode-faster.cc:209) Time taken [excluding initialization] 0.044879s: real-time factor assuming 100 frames/sec is 0.0018684
+LOG (kld_gmm-decode-faster[5.4.16~3-4f22]:main():gmm-decode-faster.cc:212) Done 5 utterances, failed for 0
+LOG (kld_gmm-decode-faster[5.4.16~3-4f22]:main():gmm-decode-faster.cc:214) Overall log-likelihood per frame is 5.49811 over 2402 frames.
+LOG (kld_ali-to-pdf[5.4.16~3-4f22]:main():ali-to-pdf.cc:68) Converted 5 alignments to pdf sequences.
+[2019-02-14 15:23:49 kld_gmm_decode] joblogs /home/MSF/tmp/7/spkrdia/1/18052.log
+[2019-02-14 15:23:49 kld_gmm_decode] <command name="/usr/bin/rm -f /home/MSF/tmp/7/spkrdia/1/18052.log"/>
+[2019-02-14 15:23:49 kld_gmm_decode] wait for 1 jobs: 18052
+[2019-02-14 15:23:49 kld_gmm_decode] all jobs finished
+[2019-02-14 15:23:49 kld_gmm_decode] <command name="/usr/bin/cat /home/MSF/tmp/7/spkrdia/1/18052.ST"/>
+[2019-02-14 15:23:49 kld_gmm_decode] <command name="/usr/bin/rm -f /home/MSF/tmp/7/spkrdia/1/18052.ST"/>
+[2019-02-14 15:23:49 vtk_kspkrdia] </decoding>
+[2019-02-14 15:23:49 vtk_kspkrdia] <command name="/usr/bin/perl -e 'printf qq(%.2f\n), 4/31'"/>
+[2019-02-14 15:23:49 vtk_kspkrdia] state=spkrdec elapsed=4 RT=0.13
+[2019-02-14 15:23:49 vtk_kspkrdia] ==========
+[2019-02-14 15:23:49 vtk_kspkrdia] transition: spkrdec -> gid
+[2019-02-14 15:23:49 vtk_kspkrdia] ==========
+[2019-02-14 15:23:49 vtk_kspkrdia] for gid extracting, apply cmvn is true
+[2019-02-14 15:23:49 vtk_kspkrdia] create directory '/home/MSF/tmp/7/spkrdia/1/spkrdec'
+[2019-02-14 15:23:49 vtk_kspkrdia] <data>
+[2019-02-14 15:23:49 vtk_kspkrdia] <command name="/home/vtk/bin/vtk_frmexport -to frm -frate 100.00 -merge -sigdur 30.73 -verbose 2 -regspkr /N\|M/r /home/MSF/tmp/7/spkrdia/1/speaker_dec.frm | /usr/bin/wc -l"/>
+regspkr=/N|M/r
+[2019-02-14 15:23:49 vtk_kspkrdia] <command name="/home/vtk/bin/vtk_frmexport -to frm -frate 100.00 -merge -sigdur 30.73 -verbose 2 -regspkr /N\|M/r /home/MSF/tmp/7/spkrdia/1/speaker_dec.frm | /home/vtk/bin/vtk_frmexport -to stm -frate 100.00 -sigdur 30.73 -verbose 2 | /usr/bin/perl -ane '$F[1]=1; print qq(@F\n);' | /home/vtk/bin/vtk_stmexport -sort spkr -to stm -verbose 2"/>
+regspkr=/N|M/r
+regspkr=/excluded_region|inter_segment_gap/r
+
+use the open format
+open format='%fid %chan1 %spkr %stime %etime %cond %text'
+
+[2019-02-14 15:23:49 vtk_kspkrdia] 
+[2019-02-14 15:23:49 vtk_kspkrdia] ***********
+[2019-02-14 15:23:49 vtk_kspkrdia] Export data
+[2019-02-14 15:23:49 vtk_kspkrdia] ***********
+[2019-02-14 15:23:49 vtk_kspkrdia] <exportdata>
+[2019-02-14 15:23:49 vtk_kspkrdia] <command name="/home/vtk/bin/vtk_stmexport -large -to kseg /home/MSF/tmp/7/spkrdia/1/speaker.stm -verbose 2"/>
+regspkr=/excluded_region|inter_segment_gap/r
+
+use the open format
+open format='%spkr+%uid %fid %stime %etime %chan0'
+
+[2019-02-14 15:23:49 vtk_kspkrdia] <command name="/home/vtk/bin/vtk_stmexport -large -to utt2spkr /home/MSF/tmp/7/spkrdia/1/speaker.stm -verbose 2"/>
+regspkr=/excluded_region|inter_segment_gap/r
+
+use the open format
+open format='%spkr+%uid %spkr'
+
+[2019-02-14 15:23:49 vtk_kspkrdia] <command name="/home/vtk/bin/vtk_stmexport -large -to spkr2utt /home/MSF/tmp/7/spkrdia/1/speaker.stm -verbose 2"/>
+regspkr=/excluded_region|inter_segment_gap/r
+
+[2019-02-14 15:23:49 vtk_kspkrdia] <frontend>
+[2019-02-14 15:23:49 vtk_kspkrdia] <command name="/home/vtk/bin/kld_frontend -exec 'g305=frontend;g15=/home/MSF/tmp/7;g21=/home/MSF/tmp/7/spkrdia/1/spkrdec;g20=/home/MSF/tmp/7/spkrdia/1/spkrdec;g34=/home/MSF/tmp/7/spkrdia/1/spkrdec/feats.scp;g92=0;g314=/home/vtk/conf/vtk.lic;' -cfg /home/vtk/conf/part/cts/cts.spkrdia.cfg -list /home/MSF/tmp/7/spkrdia/1/spkrdec/wav.scp -seglist /home/MSF/tmp/7/spkrdia/1/spkrdec/segments -bpath /home/vtk/bin -verbose 2 2> /home/MSF/tmp/7/spkrdia/1/spkrdec/fe.log"/>
+[2019-02-14 15:23:49 kld_frontend] extract features from wav files
+[2019-02-14 15:23:49 kld_frontend] <command name="/home/vtk/bin/kld_compute-plp-feats  --preemphasis-coefficient=0.97 --dither=0 --use-energy=false --cepstral-lifter=22 --low-freq=0 --num-ceps=12 --num-mel-bins=24 --remove-dc-offset=true --sample-frequency=16000 --high-freq=8000 --verbose=0 --frame-length=0.030 --license=/home/vtk/conf/vtk.lic  --cepstral-lifter=22 --cepstral-scale=1 --compress-factor=0.33333 --dither=0 --energy-floor=0.0 --frame-length=30 --frame-shift=10 --high-freq=3600 --htk-compat=false --low-freq=0 --lpc-order=12 --min-duration=0 --num-ceps=13 --num-mel-bins=15 --preemphasis-coefficient=0.97 --raw-energy=true --remove-dc-offset=true --round-to-power-of-two=true --sample-frequency=8000 --snip-edges=true --subtract-mean=false --use-energy=true --window-type=hamming  'ark:/home/vtk/bin/kld_extract-segments scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/wav.scp /home/MSF/tmp/7/spkrdia/1/spkrdec/segments ark:- |' 'ark,scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/plp.ark,/home/MSF/tmp/7/spkrdia/1/spkrdec/feats.scp'"/>
+/home/vtk/bin/kld_compute-plp-feats --preemphasis-coefficient=0.97 --dither=0 --use-energy=false --cepstral-lifter=22 --low-freq=0 --num-ceps=12 --num-mel-bins=24 --remove-dc-offset=true --sample-frequency=16000 --high-freq=8000 --verbose=0 --frame-length=0.030 --license=/home/vtk/conf/vtk.lic --cepstral-lifter=22 --cepstral-scale=1 --compress-factor=0.33333 --dither=0 --energy-floor=0.0 --frame-length=30 --frame-shift=10 --high-freq=3600 --htk-compat=false --low-freq=0 --lpc-order=12 --min-duration=0 --num-ceps=13 --num-mel-bins=15 --preemphasis-coefficient=0.97 --raw-energy=true --remove-dc-offset=true --round-to-power-of-two=true --sample-frequency=8000 --snip-edges=true --subtract-mean=false --use-energy=true --window-type=hamming 'ark:/home/vtk/bin/kld_extract-segments scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/wav.scp /home/MSF/tmp/7/spkrdia/1/spkrdec/segments ark:- |' ark,scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/plp.ark,/home/MSF/tmp/7/spkrdia/1/spkrdec/feats.scp 
+/home/vtk/bin/kld_extract-segments scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/wav.scp /home/MSF/tmp/7/spkrdia/1/spkrdec/segments ark:- 
+LOG (kld_extract-segments[5.4.16~3-4f22]:main():extract-segments.cc:195) Successfully processed 5 lines out of 5 in the segments file. 
+LOG (kld_compute-plp-feats[5.4.16~3-4f22]:main():compute-plp-feats.cc:202)  Done 5 out of 5 utterances.
+[2019-02-14 15:23:50 vtk_kspkrdia] </frontend>
+[2019-02-14 15:23:50 vtk_kspkrdia] </data>
+[2019-02-14 15:23:50 vtk_kspkrdia] 
+[2019-02-14 15:23:50 vtk_kspkrdia] ***********************
+[2019-02-14 15:23:50 vtk_kspkrdia]  Gender Identification 
+[2019-02-14 15:23:50 vtk_kspkrdia] ***********************
+[2019-02-14 15:23:50 vtk_kspkrdia] <gid>
+[2019-02-14 15:23:50 vtk_kspkrdia] <command name="/home/vtk/bin/kld_compute-cmvn-stats --spk2utt=ark:/home/MSF/tmp/7/spkrdia/1/spkrdec/spk2utt scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/feats.scp ark,scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/cmvn.ark,/home/MSF/tmp/7/spkrdia/1/spkrdec/cmvn.scp 2>> /home/MSF/tmp/7/spkrdia/cmvn.log"/>
+[2019-02-14 15:23:50 vtk_kspkrdia] create directory '/home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker'
+[2019-02-14 15:23:50 vtk_kspkrdia] <command name="/usr/bin/perl -ane 'if (not exists $seen{$F[1]}) { $seen{$F[1]}=$F[0] } END { foreach (keys %seen) { print $seen{$_}.qq( ).$_.qq(\n); } }' /home/MSF/tmp/7/spkrdia/1/spkrdec/utt2spk"/>
+[2019-02-14 15:23:50 vtk_kspkrdia] <command name="/home/vtk/bin/kld_scp spk2utt /home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/utt2spk"/>
+[2019-02-14 15:23:50 vtk_kspkrdia] <command name="/home/vtk/bin/kld_scp join /home/MSF/tmp/7/spkrdia/1/spkrdec/segments /home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/utt2spk"/>
+[2019-02-14 15:23:50 vtk_kspkrdia] <command name="/home/vtk/bin/kld_scp join /home/MSF/tmp/7/spkrdia/1/spkrdec/feats.scp /home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/utt2spk"/>
+[2019-02-14 15:23:50 vtk_kspkrdia] <command name="/home/vtk/bin/kld_scp join /home/MSF/tmp/7/spkrdia/1/spkrdec/cmvn.scp /home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/spk2utt"/>
+[2019-02-14 15:23:50 vtk_kspkrdia] <command name="/usr/bin/cp /home/MSF/tmp/7/spkrdia/1/spkrdec/wav.scp /home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/wav.scp"/>
+[2019-02-14 15:23:50 vtk_kspkrdia] <command name="/home/vtk/bin/kld_gid -exec 'g305=gid;g117=cts;g20=/home/MSF/tmp/7/spkrdia/1;g21=/home/MSF/tmp/7/spkrdia/1;g34=/home/MSF/tmp/7/spkrdia/1/spk2gender;g13=/home/vtk/conf/part/cts;g261=/home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/utt2spk;g259=/home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/spk2utt;g92=1;g248=/home/MSF/tmp/7/spkrdia/1/spkrdec/cmvn.scp;g261=/home/MSF/tmp/7/spkrdia/1/spkrdec/utt2spk;' -cfg /home/vtk/conf/part/cts/cts.spkrdia.cfg -list /home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/feats.scp -bpath /home/vtk/bin -log /home/MSF/tmp/7/spkrdia/1/gid.log -error /home/MSF/tmp/7/spkrdia/1/gid.err.log -verbose 2"/>
+[2019-02-14 15:23:50 kld_gid] <command name="/usr/bin/rm -f /home/MSF/tmp/7/spkrdia/1/gid.err.log"/>
+[2019-02-14 15:23:50 kld_gid] load proc.sh functions
+[2019-02-14 15:23:50 kld_gid] u8 proc_job
+proc_job=/home/vtk/bin/proc_job
+
+/home/vtk/bin/proc.sh proc 1.0
+
+[2019-02-14 15:23:50 kld_gid] u7 kill
+[2019-02-14 15:23:50 kld_gid] <command name="/home/vtk/bin/kld_fgmm-global-to-gmm /home/vtk/conf/part/cts/cts.gid.ubm /home/MSF/tmp/7/spkrdia/1/gid.dubm"/>
+/home/vtk/bin/kld_fgmm-global-to-gmm /home/vtk/conf/part/cts/cts.gid.ubm /home/MSF/tmp/7/spkrdia/1/gid.dubm 
+LOG (kld_fgmm-global-to-gmm[5.4.16~3-4f22]:main():fgmm-global-to-gmm.cc:58) Written diagonal GMM to /home/MSF/tmp/7/spkrdia/1/gid.dubm
+[2019-02-14 15:23:51 kld_gid] <command name="/home/vtk/bin/kld_gmm-gselect --n=20 /home/MSF/tmp/7/spkrdia/1/gid.dubm 'ark,s,cs:/home/vtk/bin/kld_apply-cmvn --utt2spk=ark:/home/MSF/tmp/7/spkrdia/1/spkrdec/utt2spk scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/cmvn.scp scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/feats.scp ark:- | /home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 ark:- ark:- |' ark:- | /home/vtk/bin/kld_fgmm-gselect --gselect=ark,s,cs:- --n=3 /home/vtk/conf/part/cts/cts.gid.ubm 'ark,s,cs:/home/vtk/bin/kld_apply-cmvn --utt2spk=ark:/home/MSF/tmp/7/spkrdia/1/spkrdec/utt2spk scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/cmvn.scp scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/feats.scp ark:- | /home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 ark:- ark:- |' 'ark:-' | /home/vtk/bin/kld_fgmm-global-get-frame-likes --average=true --gselect='ark,s,cs:-' /home/vtk/conf/part/cts/cts.male.ubm 'ark,s,cs:/home/vtk/bin/kld_apply-cmvn --utt2spk=ark:/home/MSF/tmp/7/spkrdia/1/spkrdec/utt2spk scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/cmvn.scp scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/feats.scp ark:- | /home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 ark:- ark:- |' 'ark,t:/home/MSF/tmp/7/spkrdia/1/male_logprob'"/>
+/home/vtk/bin/kld_fgmm-gselect --gselect=ark,s,cs:- --n=3 /home/vtk/conf/part/cts/cts.gid.ubm 'ark,s,cs:/home/vtk/bin/kld_apply-cmvn --utt2spk=ark:/home/MSF/tmp/7/spkrdia/1/spkrdec/utt2spk scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/cmvn.scp scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/feats.scp ark:- | /home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 ark:- ark:- |' ark:- 
+/home/vtk/bin/kld_gmm-gselect --n=20 /home/MSF/tmp/7/spkrdia/1/gid.dubm 'ark,s,cs:/home/vtk/bin/kld_apply-cmvn --utt2spk=ark:/home/MSF/tmp/7/spkrdia/1/spkrdec/utt2spk scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/cmvn.scp scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/feats.scp ark:- | /home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 ark:- ark:- |' ark:- 
+/home/vtk/bin/kld_fgmm-global-get-frame-likes --average=true --gselect=ark,s,cs:- /home/vtk/conf/part/cts/cts.male.ubm 'ark,s,cs:/home/vtk/bin/kld_apply-cmvn --utt2spk=ark:/home/MSF/tmp/7/spkrdia/1/spkrdec/utt2spk scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/cmvn.scp scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/feats.scp ark:- | /home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 ark:- ark:- |' ark,t:/home/MSF/tmp/7/spkrdia/1/male_logprob 
+/home/vtk/bin/kld_apply-cmvn --utt2spk=ark:/home/MSF/tmp/7/spkrdia/1/spkrdec/utt2spk scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/cmvn.scp scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/feats.scp ark:- 
+LOG (kld_apply-cmvn[5.4.16~3-4f22]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 1 utterances, errors on 0
+/home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 ark:- ark:- 
+/home/vtk/bin/kld_apply-cmvn --utt2spk=ark:/home/MSF/tmp/7/spkrdia/1/spkrdec/utt2spk scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/cmvn.scp scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/feats.scp ark:- 
+/home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 ark:- ark:- 
+LOG (kld_apply-cmvn[5.4.16~3-4f22]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 1 utterances, errors on 0
+LOG (kld_gmm-gselect[5.4.16~3-4f22]:main():gmm-gselect.cc:114) For 0'th file, average UBM likelihood over 919 frames is 32.9069
+LOG (kld_gmm-gselect[5.4.16~3-4f22]:main():gmm-gselect.cc:125) Done 1 files, 0 with errors, average UBM log-likelihood is 32.9069 over 919 frames.
+LOG (kld_fgmm-gselect[5.4.16~3-4f22]:main():fgmm-gselect.cc:114) For 0'th file, average UBM likelihood over 919 frames is 34.7164
+LOG (kld_fgmm-gselect[5.4.16~3-4f22]:main():fgmm-gselect.cc:125) Done 1 files, 0 with errors, average UBM log-likelihood is 34.7164 over 919 frames.
+/home/vtk/bin/kld_apply-cmvn --utt2spk=ark:/home/MSF/tmp/7/spkrdia/1/spkrdec/utt2spk scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/cmvn.scp scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/feats.scp ark:- 
+/home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 ark:- ark:- 
+LOG (kld_apply-cmvn[5.4.16~3-4f22]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 1 utterances, errors on 0
+LOG (kld_fgmm-global-get-frame-likes[5.4.16~3-4f22]:main():fgmm-global-get-frame-likes.cc:118) Done 1 files; 0 with errors.
+LOG (kld_fgmm-global-get-frame-likes[5.4.16~3-4f22]:main():fgmm-global-get-frame-likes.cc:120) Overall likelihood per frame = 35.2208 over 919 frames.
+[2019-02-14 15:23:51 kld_gid] <command name="/home/vtk/bin/kld_gmm-gselect --n=20 /home/MSF/tmp/7/spkrdia/1/gid.dubm 'ark,s,cs:/home/vtk/bin/kld_apply-cmvn --utt2spk=ark:/home/MSF/tmp/7/spkrdia/1/spkrdec/utt2spk scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/cmvn.scp scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/feats.scp ark:- | /home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 ark:- ark:- |' ark:- | /home/vtk/bin/kld_fgmm-gselect --gselect=ark,s,cs:- --n=3 /home/vtk/conf/part/cts/cts.gid.ubm 'ark,s,cs:/home/vtk/bin/kld_apply-cmvn --utt2spk=ark:/home/MSF/tmp/7/spkrdia/1/spkrdec/utt2spk scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/cmvn.scp scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/feats.scp ark:- | /home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 ark:- ark:- |' 'ark:-' | /home/vtk/bin/kld_fgmm-global-get-frame-likes --average=true --gselect='ark,s,cs:-' /home/vtk/conf/part/cts/cts.female.ubm 'ark,s,cs:/home/vtk/bin/kld_apply-cmvn --utt2spk=ark:/home/MSF/tmp/7/spkrdia/1/spkrdec/utt2spk scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/cmvn.scp scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/feats.scp ark:- | /home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 ark:- ark:- |' 'ark,t:/home/MSF/tmp/7/spkrdia/1/female_logprob'"/>
+/home/vtk/bin/kld_fgmm-gselect --gselect=ark,s,cs:- --n=3 /home/vtk/conf/part/cts/cts.gid.ubm 'ark,s,cs:/home/vtk/bin/kld_apply-cmvn --utt2spk=ark:/home/MSF/tmp/7/spkrdia/1/spkrdec/utt2spk scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/cmvn.scp scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/feats.scp ark:- | /home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 ark:- ark:- |' ark:- 
+/home/vtk/bin/kld_gmm-gselect --n=20 /home/MSF/tmp/7/spkrdia/1/gid.dubm 'ark,s,cs:/home/vtk/bin/kld_apply-cmvn --utt2spk=ark:/home/MSF/tmp/7/spkrdia/1/spkrdec/utt2spk scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/cmvn.scp scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/feats.scp ark:- | /home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 ark:- ark:- |' ark:- 
+/home/vtk/bin/kld_fgmm-global-get-frame-likes --average=true --gselect=ark,s,cs:- /home/vtk/conf/part/cts/cts.female.ubm 'ark,s,cs:/home/vtk/bin/kld_apply-cmvn --utt2spk=ark:/home/MSF/tmp/7/spkrdia/1/spkrdec/utt2spk scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/cmvn.scp scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/feats.scp ark:- | /home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 ark:- ark:- |' ark,t:/home/MSF/tmp/7/spkrdia/1/female_logprob 
+/home/vtk/bin/kld_apply-cmvn --utt2spk=ark:/home/MSF/tmp/7/spkrdia/1/spkrdec/utt2spk scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/cmvn.scp scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/feats.scp ark:- 
+/home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 ark:- ark:- 
+LOG (kld_apply-cmvn[5.4.16~3-4f22]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 1 utterances, errors on 0
+/home/vtk/bin/kld_apply-cmvn --utt2spk=ark:/home/MSF/tmp/7/spkrdia/1/spkrdec/utt2spk scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/cmvn.scp scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/feats.scp ark:- 
+/home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 ark:- ark:- 
+LOG (kld_apply-cmvn[5.4.16~3-4f22]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 1 utterances, errors on 0
+LOG (kld_gmm-gselect[5.4.16~3-4f22]:main():gmm-gselect.cc:114) For 0'th file, average UBM likelihood over 919 frames is 32.9069
+LOG (kld_gmm-gselect[5.4.16~3-4f22]:main():gmm-gselect.cc:125) Done 1 files, 0 with errors, average UBM log-likelihood is 32.9069 over 919 frames.
+/home/vtk/bin/kld_add-deltas --delta-window=3 --delta-order=2 ark:- ark:- 
+/home/vtk/bin/kld_apply-cmvn --utt2spk=ark:/home/MSF/tmp/7/spkrdia/1/spkrdec/utt2spk scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/cmvn.scp scp:/home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/feats.scp ark:- 
+LOG (kld_apply-cmvn[5.4.16~3-4f22]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 1 utterances, errors on 0
+LOG (kld_fgmm-gselect[5.4.16~3-4f22]:main():fgmm-gselect.cc:114) For 0'th file, average UBM likelihood over 919 frames is 34.7164
+LOG (kld_fgmm-gselect[5.4.16~3-4f22]:main():fgmm-gselect.cc:125) Done 1 files, 0 with errors, average UBM log-likelihood is 34.7164 over 919 frames.
+LOG (kld_fgmm-global-get-frame-likes[5.4.16~3-4f22]:main():fgmm-global-get-frame-likes.cc:118) Done 1 files; 0 with errors.
+LOG (kld_fgmm-global-get-frame-likes[5.4.16~3-4f22]:main():fgmm-global-get-frame-likes.cc:120) Overall likelihood per frame = 34.4397 over 919 frames.
+[2019-02-14 15:23:51 kld_gid] <command name="/usr/bin/cat /home/MSF/tmp/7/spkrdia/1/male_logprob | /usr/bin/wc -l"/>
+[2019-02-14 15:23:51 kld_gid] <command name="/usr/bin/cat /home/MSF/tmp/7/spkrdia/1/female_logprob | /usr/bin/wc -l"/>
+[2019-02-14 15:23:51 kld_gid] <command name="/home/vtk/bin/vtk_get_spk2gender /home/MSF/tmp/7/spkrdia/1/{male,female}_logprob /home/MSF/tmp/7/spkrdia/1/spkrdec/one_utt_per_speaker/spk2utt | /usr/bin/sort -u"/>
+[2019-02-14 15:23:51 vtk_kspkrdia] </gid>
+[2019-02-14 15:23:51 vtk_kspkrdia] <command name="/usr/bin/perl -ne 'chomp; print $_.qq( t\n)' /home/MSF/tmp/7/spkrdia/1/spk2gender"/>
+[2019-02-14 15:23:51 vtk_kspkrdia] <command name="/usr/bin/perl -e 'printf qq(%.2f\n), 2/31'"/>
+[2019-02-14 15:23:51 vtk_kspkrdia] state=gid elapsed=2 RT=0.06
+[2019-02-14 15:23:51 vtk_kspkrdia] <command name="/usr/bin/rm -f /home/MSF/tmp/7/spkrdia/1.frm"/>
+[2019-02-14 15:23:51 vtk_kspkrdia] <command name="/usr/bin/ln -s /home/MSF/tmp/7/spkrdia/1/speaker_dec.frm /home/MSF/tmp/7/spkrdia/1.frm"/>
+[2019-02-14 15:23:51 vtk_kspkrdia] ==========
+[2019-02-14 15:23:51 vtk_kspkrdia] transition: gid -> buildspkrdia
+[2019-02-14 15:23:51 vtk_kspkrdia] ==========
+[2019-02-14 15:23:51 vtk_kspkrdia] 
+[2019-02-14 15:23:51 vtk_kspkrdia] *******************
+[2019-02-14 15:23:51 vtk_kspkrdia]  Build output file 
+[2019-02-14 15:23:51 vtk_kspkrdia] *******************
+[2019-02-14 15:23:51 vtk_kspkrdia] <buildoutputfile>
+[2019-02-14 15:23:51 vtk_kspkrdia] <command name="/home/vtk/bin/vtk_frmexport -regspkr /N/r -spkinfo /home/MSF/tmp/7/spkrdia/1/spk2bandgender -to frm -merge -sigdur 30.73 -smoothdur 200 -splitdur 2000 /home/MSF/tmp/7/spkrdia/1.frm -verbose 2 | /home/vtk/bin/vtk_frmexport -to stm -sigdur 30.73 -verbose 2 | /usr/bin/perl -ane 'next if /^;;/; $F[1]=1; print qq(@F\n);' | /home/vtk/bin/vtk_stmexport -to stm -verbose 2"/>
+regspkr=/N/r
+regspkr=/excluded_region|inter_segment_gap/r
+
+use the open format
+ignore speaker 2 beacuse is not in /home/MSF/tmp/7/spkrdia/1/spk2bandgender
+open format='%fid %chan1 %spkr %stime %etime %cond %text'
+
+[2019-02-14 15:23:51 vtk_kspkrdia] <command name="/usr/bin/cat /home/MSF/tmp/7/spkrdia/1.stm"/>
+[2019-02-14 15:23:51 vtk_kspkrdia] <command name="/usr/bin/cat"/>
+[2019-02-14 15:23:51 vtk_kspkrdia] </buildouputfile>
+[2019-02-14 15:23:51 vtk_kspkrdia] <command name="/usr/bin/perl -e 'printf qq(%.2f\n), 13/31'"/>
+[2019-02-14 15:23:51 vtk_kspkrdia] state=end elapsed=13 RT=0.42
+[2019-02-14 15:23:51 vtk_kspkrdia] end of processing
+[2019-02-14 15:23:51 vtk_kspkrdia] 
+[2019-02-14 15:23:51 vtk_trans] </spkrdia>
+[2019-02-14 15:23:51 vtk_trans] 
+[2019-02-14 15:23:51 vtk_trans] <command name="/usr/bin/perl -e 'printf qq(%.2f\n), 13/31'"/>
+[2019-02-14 15:23:51 vtk_trans] state=diarization elapsed=13 RT=0.42
+[2019-02-14 15:23:51 vtk_trans] <command name="/home/vtk/bin/vtk_stmexport -verbose 0 -stats /home/MSF/tmp/7/part.stm 2> /home/MSF/tmp/7/stats"/>
+[2019-02-14 15:23:51 vtk_trans] <command name="/usr/bin/perl -lne 'print $1 if (/speech-duration=.*\((\d+) sec\)/)' /home/MSF/tmp/7/stats"/>
+[2019-02-14 15:23:51 vtk_trans] speech-duration: 30 seconds
+[2019-02-14 15:23:51 vtk_trans] start transcriptions of the list 'eng'
+[2019-02-14 15:23:51 vtk_trans] 
+[2019-02-14 15:23:51 vtk_trans] *************
+[2019-02-14 15:23:51 vtk_trans] Transcription
+[2019-02-14 15:23:51 vtk_trans] *************
+[2019-02-14 15:23:51 vtk_trans] <trans>
+[2019-02-14 15:23:51 vtk_trans] lang:eng
+[2019-02-14 15:23:51 vtk_trans] create directory '/home/MSF/tmp/7/eng'
+[2019-02-14 15:23:51 vtk_trans] <command name="/usr/bin/sort -n -k2,2 -k3,3"/>
+[2019-02-14 15:23:51 vtk_trans] <command name="/usr/bin/cat /home/MSF/tmp/7/part.stm"/>
+[2019-02-14 15:23:51 vtk_trans] <command name="/home/vtk/bin/vtk_ktrans -ifile /home/MSF/tmp/7/ifile.wav -to ctm -ofile /home/MSF/tmp/7/eng.ctm -language eng -type cts -partfile /home/MSF/tmp/7/eng.stm -verbose 2 -wpath /home/MSF/tmp/7/eng -log /home/MSF/tmp/7/eng.log -normalize -quality '0' -jobpriority '1' -type 'cts' -jobname '7' -jobnthreads '1'"/>
+[2019-02-14 15:26:56 vtk_trans] 1/1
+[2019-02-14 15:23:52 vtk_ktrans] command line: /home/vtk/bin/vtk_ktrans -ifile /home/MSF/tmp/7/ifile.wav -to ctm -ofile /home/MSF/tmp/7/eng.ctm -language eng -type cts -partfile /home/MSF/tmp/7/eng.stm -verbose 2 -wpath /home/MSF/tmp/7/eng -log /home/MSF/tmp/7/eng.log -normalize -quality 0 -jobpriority 1 -type cts -jobname 7 -jobnthreads 1
+[2019-02-14 15:23:52 vtk_ktrans] bin-path: /home/vtk/bin VTK BIN Version 6.0.4 2018-11-30 VECSYS
+[2019-02-14 15:23:52 vtk_ktrans] conf-path: /home/vtk/conf
+[2019-02-14 15:23:52 vtk_ktrans] working-path: /home/MSF/tmp/7/eng
+[2019-02-14 15:23:52 vtk_ktrans] working-dir: /home/MSF/tmp/7/eng
+[2019-02-14 15:23:52 vtk_ktrans] mode = 1792
+[2019-02-14 15:23:52 vtk_ktrans] <command name="/home/vtk/bin/vplay -fwav:r /home/MSF/tmp/7/ifile.wav 2>&1"/>
+[2019-02-14 15:23:52 vtk_ktrans] <command name="/usr/bin/perl -ne 'printf qq(%.0f\n), $1 if (/duration:\s*(\S+)\s*seconds/)'"/>
+[2019-02-14 15:23:52 vtk_ktrans] audio-duration:31 seconds
+[2019-02-14 15:23:52 vtk_ktrans] start of transcription vtk_ktrans 1.9 running on localhost
+[2019-02-14 15:23:52 vtk_ktrans] ==========
+[2019-02-14 15:23:52 vtk_ktrans] transition: start -> frontend 
+[2019-02-14 15:23:52 vtk_ktrans] ==========
+[2019-02-14 15:23:52 vtk_ktrans] <command name="/home/vtk/bin/kld_scp split /home/MSF/tmp/7/eng.stm /dev/null"/>
+[2019-02-14 15:23:52 vtk_ktrans] <command name="/home/vtk/bin/vtk_stmexport -sort spkr -to stm -verbose 0"/>
+[2019-02-14 15:23:52 vtk_ktrans] <command name="/home/vtk/bin/vtk_stmexport -to stms -skiphdr -verbose 0 /home/MSF/tmp/7/eng.stm"/>
+[2019-02-14 15:23:52 vtk_ktrans] <command name="/home/vtk/bin/vtk_stmexport -to kseg -large -verbose 0 -stats /home/MSF/tmp/7/eng/part.spkr.stm 2> /home/MSF/tmp/7/eng/stmexport.log"/>
+[2019-02-14 15:23:52 vtk_ktrans] <command name="/usr/bin/perl -lne 'print $1 if (/speech-duration=.*\((\d+) sec\)/)' /home/MSF/tmp/7/eng/stmexport.log"/>
+
+Statistics:
+files=1 
+segments=2 
+speech-duration=0:00:30 (30 sec)
+total-duration=0:00:30 (30 sec)
+[2019-02-14 15:23:52 vtk_ktrans] speech-duration=30 seconds
+[2019-02-14 15:23:52 vtk_ktrans] <command name="/home/vtk/bin/vtk_stmexport -to spkr2utt /home/MSF/tmp/7/eng/part.spkr.stm -large -verbose 0 > /home/MSF/tmp/7/eng/spk2utt.map"/>
+[2019-02-14 15:23:52 vtk_ktrans] <command name="/home/vtk/bin/vtk_stmexport -to utt2spkr /home/MSF/tmp/7/eng/part.spkr.stm -large -verbose 0 > /home/MSF/tmp/7/eng/utt2spk.map"/>
+[2019-02-14 15:23:52 vtk_ktrans] 
+[2019-02-14 15:23:52 vtk_ktrans] ********
+[2019-02-14 15:23:52 vtk_ktrans] Frontend
+[2019-02-14 15:23:52 vtk_ktrans] ********
+[2019-02-14 15:23:52 vtk_ktrans] <frontend>
+[2019-02-14 15:23:52 vtk_ktrans] <command name="/home/vtk/bin/kld_frontend -exec 'g305=frontend_hires;g15=/home/MSF/tmp/7;g21=/home/MSF/tmp/7/eng;g20=/home/MSF/tmp/7/eng;g34=/home/MSF/tmp/7/eng/ifile.fe.scp;g259=/home/MSF/tmp/7/eng/spk2utt.map;g248=/home/MSF/tmp/7/eng/ifile.cmvn.scp;g92=1;g95=1;g94=7;g314=/home/vtk/conf/vtk.lic;' -cfg /home/vtk/conf/trans/cts/eng/eng-cts.trans.cfg -list /home/MSF/tmp/7/eng/wav.scp -seglist /home/MSF/tmp/7/eng/ifile.seg -bpath /home/vtk/bin -verbose 2 2> /home/MSF/tmp/7/eng/fe.log"/>
+[2019-02-14 15:23:52 kld_frontend] load proc.sh functions
+[2019-02-14 15:23:52 kld_frontend] u8 proc_job
+proc_job=/home/vtk/bin/proc_job
+
+/home/vtk/bin/proc.sh proc 1.0
+
+[2019-02-14 15:23:52 kld_frontend] u7 kill
+[2019-02-14 15:23:52 kld_frontend] extract features from wav files
+[2019-02-14 15:23:52 kld_frontend] <command name="/home/vtk/bin/kld_scp split /home/MSF/tmp/7/eng/ifile.seg  /home/MSF/tmp/7/eng/split.0.scp"/>
+[2019-02-14 15:23:52 kld_frontend] start 1 threads
+[2019-02-14 15:23:52 kld_frontend] waiting job= 18712
+/home/vtk/bin/kld_compute-plp-feats --preemphasis-coefficient=0.97 --dither=0 --use-energy=false --cepstral-lifter=22 --low-freq=0 --num-ceps=12 --num-mel-bins=24 --remove-dc-offset=true --sample-frequency=16000 --high-freq=8000 --verbose=0 --frame-length=0.030 --license=/home/vtk/conf/vtk.lic --cepstral-lifter=22 --cepstral-scale=1 --channel=-1 --compress-factor=0.33333 --debug-mel=false --dither=1 --energy-floor=0 --frame-length=25 --frame-shift=10 --high-freq=-400 --htk-compat=false --low-freq=0 --lpc-order=39 --min-duration=0 --num-ceps=40 --num-mel-bins=40 --preemphasis-coefficient=0.97 --raw-energy=true --remove-dc-offset=true --round-to-power-of-two=true --sample-frequency=8000 --snip-edges=true --subtract-mean=false --use-energy=false --window-type=povey 'ark:/home/vtk/bin/kld_extract-segments scp:/home/MSF/tmp/7/eng/wav.scp /home/MSF/tmp/7/eng/split.0.scp ark:- |' 'ark:| /home/vtk/bin/kld_copy-feats --compress=true ark:- ark,scp:/home/MSF/tmp/7/eng/plp.0.ark,/home/MSF/tmp/7/eng/feats.0.scp'
+[2019-02-14 15:23:52 kld_frontend] logfiles:/home/MSF/tmp/7/eng/18712.log
+[2019-02-14 15:23:52 kld_frontend] wait for 1 jobs: 18712
+[2019-02-14 15:23:54 kld_frontend] all jobs finished
+[2019-02-14 15:23:54 kld_frontend] elapsed time=0:00:02
+[2019-02-14 15:23:54 kld_frontend] <command name="/usr/bin/cat /home/MSF/tmp/7/eng/feats.0.scp"/>
+[2019-02-14 15:23:54 kld_frontend] <command name="/usr/bin/rm /home/MSF/tmp/7/eng/feats.0.scp"/>
+/home/vtk/bin/kld_compute-cmvn-stats --spk2utt=ark:/home/MSF/tmp/7/eng/spk2utt.map scp:/home/MSF/tmp/7/eng/ifile.fe.scp ark,scp:/home/MSF/tmp/7/eng/cmvn.ark,/home/MSF/tmp/7/eng/ifile.cmvn.scp 
+LOG (kld_compute-cmvn-stats[5.4.16~3-4f22]:main():compute-cmvn-stats.cc:171) Done accumulating CMVN stats for 2 utterances; 0 had errors.
+[2019-02-14 15:23:54 kld_frontend] <command name="/usr/bin/cat /home/MSF/tmp/7/eng/18712.log"/>
+[2019-02-14 15:23:52 process_job]
+#command='/home/vtk/bin/kld_compute-plp-feats'
+#Process informations:
+#jobid=18712
+#hostname=localhost
+
+/home/vtk/bin/kld_compute-plp-feats --preemphasis-coefficient=0.97 --dither=0 --use-energy=false --cepstral-lifter=22 --low-freq=0 --num-ceps=12 --num-mel-bins=24 --remove-dc-offset=true --sample-frequency=16000 --high-freq=8000 --verbose=0 --frame-length=0.030 --license=/home/vtk/conf/vtk.lic --cepstral-lifter=22 --cepstral-scale=1 --channel=-1 --compress-factor=0.33333 --debug-mel=false --dither=1 --energy-floor=0 --frame-length=25 --frame-shift=10 --high-freq=-400 --htk-compat=false --low-freq=0 --lpc-order=39 --min-duration=0 --num-ceps=40 --num-mel-bins=40 --preemphasis-coefficient=0.97 --raw-energy=true --remove-dc-offset=true --round-to-power-of-two=true --sample-frequency=8000 --snip-edges=true --subtract-mean=false --use-energy=false --window-type=povey 'ark:/home/vtk/bin/kld_extract-segments scp:/home/MSF/tmp/7/eng/wav.scp /home/MSF/tmp/7/eng/split.0.scp ark:- |' 'ark:| /home/vtk/bin/kld_copy-feats --compress=true ark:- ark,scp:/home/MSF/tmp/7/eng/plp.0.ark,/home/MSF/tmp/7/eng/feats.0.scp'
+/home/vtk/bin/kld_compute-plp-feats --preemphasis-coefficient=0.97 --dither=0 --use-energy=false --cepstral-lifter=22 --low-freq=0 --num-ceps=12 --num-mel-bins=24 --remove-dc-offset=true --sample-frequency=16000 --high-freq=8000 --verbose=0 --frame-length=0.030 --license=/home/vtk/conf/vtk.lic --cepstral-lifter=22 --cepstral-scale=1 --channel=-1 --compress-factor=0.33333 --debug-mel=false --dither=1 --energy-floor=0 --frame-length=25 --frame-shift=10 --high-freq=-400 --htk-compat=false --low-freq=0 --lpc-order=39 --min-duration=0 --num-ceps=40 --num-mel-bins=40 --preemphasis-coefficient=0.97 --raw-energy=true --remove-dc-offset=true --round-to-power-of-two=true --sample-frequency=8000 --snip-edges=true --subtract-mean=false --use-energy=false --window-type=povey 'ark:/home/vtk/bin/kld_extract-segments scp:/home/MSF/tmp/7/eng/wav.scp /home/MSF/tmp/7/eng/split.0.scp ark:- |' 'ark:| /home/vtk/bin/kld_copy-feats --compress=true ark:- ark,scp:/home/MSF/tmp/7/eng/plp.0.ark,/home/MSF/tmp/7/eng/feats.0.scp' 
+/home/vtk/bin/kld_extract-segments scp:/home/MSF/tmp/7/eng/wav.scp /home/MSF/tmp/7/eng/split.0.scp ark:- 
+/home/vtk/bin/kld_copy-feats --compress=true ark:- ark,scp:/home/MSF/tmp/7/eng/plp.0.ark,/home/MSF/tmp/7/eng/feats.0.scp 
+LOG (kld_extract-segments[5.4.16~3-4f22]:main():extract-segments.cc:195) Successfully processed 2 lines out of 2 in the segments file. 
+LOG (kld_compute-plp-feats[5.4.16~3-4f22]:main():compute-plp-feats.cc:202)  Done 2 out of 2 utterances.
+LOG (kld_copy-feats[5.4.16~3-4f22]:main():copy-feats.cc:143) Copied 2 feature matrices.
+[2019-02-14 15:23:54 kld_frontend] joblogs /home/MSF/tmp/7/eng/18712.log
+[2019-02-14 15:23:54 kld_frontend] <command name="/usr/bin/rm -f /home/MSF/tmp/7/eng/18712.log"/>
+[2019-02-14 15:23:54 kld_frontend] wait for 1 jobs: 18712
+[2019-02-14 15:23:54 kld_frontend] all jobs finished
+[2019-02-14 15:23:54 kld_frontend] <command name="/usr/bin/cat /home/MSF/tmp/7/eng/18712.ST"/>
+[2019-02-14 15:23:54 kld_frontend] <command name="/usr/bin/rm -f /home/MSF/tmp/7/eng/18712.ST"/>
+[2019-02-14 15:23:54 vtk_ktrans] </frontend>
+[2019-02-14 15:23:54 vtk_ktrans] <command name="/usr/bin/perl -e 'printf qq(%.2f\n), 2/30'"/>
+[2019-02-14 15:23:54 vtk_ktrans] state=frontend elapsed=2 RT=0.07
+[2019-02-14 15:23:54 vtk_ktrans] ==========
+[2019-02-14 15:23:54 vtk_ktrans] transition: frontend -> ivector 
+[2019-02-14 15:23:54 vtk_ktrans] ==========
+[2019-02-14 15:23:54 vtk_ktrans] *********************************************
+[2019-02-14 15:23:54 vtk_ktrans]  Compute i-vector online 
+[2019-02-14 15:23:54 vtk_ktrans] *********************************************
+[2019-02-14 15:23:54 vtk_ktrans] <ivector>
+[2019-02-14 15:23:54 vtk_ktrans] <command name="/home/vtk/bin/kld_ivector-extract-online2 --cmvn-config=/home/vtk/conf/trans/cts/eng/eng-cts.online_cmvn.conf  --splice-config=/home/vtk/conf/trans/cts/eng/eng-cts.splice.conf  --diag-ubm=/home/vtk/conf/trans/cts/eng/eng-cts.ie.dubm  --ivector-extractor=/home/vtk/conf/trans/cts/eng/eng-cts.ie  --lda-matrix=/home/vtk/conf/trans/cts/eng/eng-cts.lda_ie.mat  --global-cmvn-stats=/home/vtk/conf/trans/cts/eng/eng-cts.ie_global_cmvn.stats   --ivector-period=10 --num-gselect=5 --min-post=0.025 --posterior-scale=0.1 --max-remembered-frames=1000 --max-count=0  ark:/home/MSF/tmp/7/eng/spk2utt.map scp:/home/MSF/tmp/7/eng/ifile.fe.scp ark:- | /home/vtk/bin/kld_copy-feats --compress=true ark:- ark,scp:/home/MSF/tmp/7/eng/ivec.ark,/home/MSF/tmp/7/eng/ifile.ivec.scp 2> /home/MSF/tmp/7/eng/ivec.log"/>
+/home/vtk/bin/kld_copy-feats --compress=true ark:- ark,scp:/home/MSF/tmp/7/eng/ivec.ark,/home/MSF/tmp/7/eng/ifile.ivec.scp 
+/home/vtk/bin/kld_ivector-extract-online2 --cmvn-config=/home/vtk/conf/trans/cts/eng/eng-cts.online_cmvn.conf --splice-config=/home/vtk/conf/trans/cts/eng/eng-cts.splice.conf --diag-ubm=/home/vtk/conf/trans/cts/eng/eng-cts.ie.dubm --ivector-extractor=/home/vtk/conf/trans/cts/eng/eng-cts.ie --lda-matrix=/home/vtk/conf/trans/cts/eng/eng-cts.lda_ie.mat --global-cmvn-stats=/home/vtk/conf/trans/cts/eng/eng-cts.ie_global_cmvn.stats --ivector-period=10 --num-gselect=5 --min-post=0.025 --posterior-scale=0.1 --max-remembered-frames=1000 --max-count=0 ark:/home/MSF/tmp/7/eng/spk2utt.map scp:/home/MSF/tmp/7/eng/ifile.fe.scp ark:- 
+LOG (kld_ivector-extract-online2[5.4.16~3-4f22]:ComputeDerivedVars():ivector-extractor.cc:183) Computing derived variables for iVector extractor
+LOG (kld_ivector-extract-online2[5.4.16~3-4f22]:ComputeDerivedVars():ivector-extractor.cc:204) Done.
+LOG (kld_ivector-extract-online2[5.4.16~3-4f22]:main():ivector-extract-online2.cc:143) Estimated iVectors for 2 files, 0 with errors.
+LOG (kld_ivector-extract-online2[5.4.16~3-4f22]:main():ivector-extract-online2.cc:145) Average objective-function improvement was 18.0989 per frame, over 3069 frames (weighted).
+LOG (kld_ivector-extract-online2[5.4.16~3-4f22]:main():ivector-extract-online2.cc:148) Average iVector length was 7.84536 and at utterance-end was 9.46112, over 3069 frames (weighted);  expected length is 10
+LOG (kld_copy-feats[5.4.16~3-4f22]:main():copy-feats.cc:143) Copied 2 feature matrices.
+[2019-02-14 15:23:56 vtk_ktrans] </ivector>
+[2019-02-14 15:23:56 vtk_ktrans] <command name="/usr/bin/perl -e 'printf qq(%.2f\n), 2/30'"/>
+[2019-02-14 15:23:56 vtk_ktrans] state=ivector elapsed=2 RT=0.07
+[2019-02-14 15:23:56 vtk_ktrans] ==========
+[2019-02-14 15:23:56 vtk_ktrans] transition: ivector -> decode_nnet3 
+[2019-02-14 15:23:56 vtk_ktrans] ==========
+[2019-02-14 15:23:56 vtk_ktrans] 
+[2019-02-14 15:23:56 vtk_ktrans] ********
+[2019-02-14 15:23:56 vtk_ktrans] Decoding
+[2019-02-14 15:23:56 vtk_ktrans] ********
+[2019-02-14 15:23:56 vtk_ktrans] <decoding>
+[2019-02-14 15:23:56 vtk_ktrans] <command name="/home/vtk/bin/kld_decode -exec 'g305=decode_nnet3;class=;g238=;g13=/home/vtk/conf/trans/cts/eng;g19=/home/vtk/conf/trans/cts/eng;g458=/home/vtk/conf/trans/cts/eng;g21=/home/MSF/tmp/7/eng;g20=/home/MSF/tmp/7/eng;g248=/home/MSF/tmp/7/eng/ifile.cmvn.scp;g259=/home/MSF/tmp/7/eng/spk2utt.map;g261=/home/MSF/tmp/7/eng/utt2spk.map;g34=/home/MSF/tmp/7/eng/ifile.lat.scp;g257=/home/MSF/tmp/7/eng/ifile.seg;g65=eng;g117=cts;g459=/home/MSF/tmp/7/eng/ifile.ivec.scp g92=1;g277=true;g95=1;g94=7;g314=/home/vtk/conf/vtk.lic;g327=no;' -cfg /home/vtk/conf/trans/cts/eng/eng-cts.trans.cfg -list /home/MSF/tmp/7/eng/ifile.fe.scp -bpath /home/vtk/bin -log /home/MSF/tmp/7/eng/dec.log -error /home/MSF/tmp/7/eng/dec.err.log -verbose 2"/>
+[2019-02-14 15:23:57 kld_decode] <command name="/usr/bin/rm -f /home/MSF/tmp/7/eng/dec.err.log"/>
+[2019-02-14 15:23:57 kld_decode] load proc.sh functions
+[2019-02-14 15:23:57 kld_decode] u8 proc_job
+proc_job=/home/vtk/bin/proc_job
+
+/home/vtk/bin/proc.sh proc 1.0
+
+[2019-02-14 15:23:57 kld_decode] u7 kill
+[2019-02-14 15:23:57 kld_decode] start decoding
+[2019-02-14 15:23:57 kld_decode] start 1 jobs
+[2019-02-14 15:23:57 kld_decode] <command name="/home/vtk/bin/kld_nnet3-latgen-faster-parallel --acoustic-scale=0.083333 --allow-partial=true --beam=13.0 --determinize-lattice=true --lattice-beam=6.0 --max-active=7000 --max-mem=50000000 --min-active=200 --word-symbol-table=/home/vtk/conf/trans/cts/eng/eng-cts.words.sym --license=/home/vtk/conf/vtk.lic --online-ivectors=scp:/home/MSF/tmp/7/eng/ifile.ivec.scp  --frame-subsampling-factor=3 --frames-per-chunk=150 --extra-left-context=50 --extra-right-context=0 --extra-left-context-initial=-1 --extra-right-context-final=-1 --minimize=false --max-active=7000 --min-active=200 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=1.0 --allow-partial=true --online-ivector-period=10  --num-threads=1 /home/vtk/conf/trans/cts/eng/eng-cts.nnet3.mdl /home/vtk/conf/trans/cts/eng/eng-cts.nnet3.fst 'ark,s,cs:/home/vtk/bin/kld_apply-cmvn --norm-means=false --norm-vars=false --utt2spk=ark:/home/MSF/tmp/7/eng/utt2spk.map scp:/home/MSF/tmp/7/eng/ifile.cmvn.scp scp:/home/MSF/tmp/7/eng/ifile.fe.scp ark:- |' 'ark:| /home/vtk/bin/kld_lattice-scale --acoustic-scale=10.0 ark:- ark,scp:/home/MSF/tmp/7/eng/lat.ark,/home/MSF/tmp/7/eng/ifile.lat.scp'"/>
+/home/vtk/bin/kld_nnet3-latgen-faster-parallel --acoustic-scale=0.083333 --allow-partial=true --beam=13.0 --determinize-lattice=true --lattice-beam=6.0 --max-active=7000 --max-mem=50000000 --min-active=200 --word-symbol-table=/home/vtk/conf/trans/cts/eng/eng-cts.words.sym --license=/home/vtk/conf/vtk.lic --online-ivectors=scp:/home/MSF/tmp/7/eng/ifile.ivec.scp --frame-subsampling-factor=3 --frames-per-chunk=150 --extra-left-context=50 --extra-right-context=0 --extra-left-context-initial=-1 --extra-right-context-final=-1 --minimize=false --max-active=7000 --min-active=200 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=1.0 --allow-partial=true --online-ivector-period=10 --num-threads=1 /home/vtk/conf/trans/cts/eng/eng-cts.nnet3.mdl /home/vtk/conf/trans/cts/eng/eng-cts.nnet3.fst 'ark,s,cs:/home/vtk/bin/kld_apply-cmvn --norm-means=false --norm-vars=false --utt2spk=ark:/home/MSF/tmp/7/eng/utt2spk.map scp:/home/MSF/tmp/7/eng/ifile.cmvn.scp scp:/home/MSF/tmp/7/eng/ifile.fe.scp ark:- |' 'ark:| /home/vtk/bin/kld_lattice-scale --acoustic-scale=10.0 ark:- ark,scp:/home/MSF/tmp/7/eng/lat.ark,/home/MSF/tmp/7/eng/ifile.lat.scp' 
+LOG (kld_nnet3-latgen-faster-parallel[5.4.16~3-4f22]:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 1 orphan nodes.
+LOG (kld_nnet3-latgen-faster-parallel[5.4.16~3-4f22]:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 2 orphan components.
+LOG (kld_nnet3-latgen-faster-parallel[5.4.16~3-4f22]:Collapse():nnet-utils.cc:1251) Added 1 components, removed 2
+/home/vtk/bin/kld_lattice-scale --acoustic-scale=10.0 ark:- ark,scp:/home/MSF/tmp/7/eng/lat.ark,/home/MSF/tmp/7/eng/ifile.lat.scp 
+/home/vtk/bin/kld_apply-cmvn --norm-means=false --norm-vars=false --utt2spk=ark:/home/MSF/tmp/7/eng/utt2spk.map scp:/home/MSF/tmp/7/eng/ifile.cmvn.scp scp:/home/MSF/tmp/7/eng/ifile.fe.scp ark:- 
+LOG (kld_apply-cmvn[5.4.16~3-4f22]:main():apply-cmvn.cc:81) Copied 2 utterances.
+ifile_SPK00001+00000-000_00019-270_1 hello hey what's happening fine um did you still need that cobb ditzy at that would be great you can cut mitzi but the usual got no 
+LOG (kld_nnet3-latgen-faster-parallel[5.4.16~3-4f22]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:178) Log-like per frame for utterance ifile_SPK00001+00000-000_00019-270_1 is 1.14001 over 642 frames.
+LOG (kld_nnet3-latgen-faster-parallel[5.4.16~3-4f22]:~CachingOptimizingCompiler():nnet-optimize.cc:734) 0.604 seconds taken in nnet3 compilation total (breakdown: 0.138 compilation, 0.342 optimization, 0 shortcut expansion, 0.0958 checking, 0.000374 computing indexes, 0.0276 misc.)
+ifile_SPK00001+00019-270_00030-730_1 well i'll tell you i tell you what calm call me on the unsecured line i'll call yours okay bye 
+LOG (kld_nnet3-latgen-faster-parallel[5.4.16~3-4f22]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:178) Log-like per frame for utterance ifile_SPK00001+00019-270_00030-730_1 is 1.24033 over 382 frames.
+LOG (kld_nnet3-latgen-faster-parallel[5.4.16~3-4f22]:~CachingOptimizingCompiler():nnet-optimize.cc:734) 0.448 seconds taken in nnet3 compilation total (breakdown: 0.0896 compilation, 0.276 optimization, 0 shortcut expansion, 0.0609 checking, 0.000137 computing indexes, 0.021 misc.)
+LOG (kld_nnet3-latgen-faster-parallel[5.4.16~3-4f22]:main():nnet3-latgen-faster-parallel.cc:292) Time taken 122.123s: real-time factor assuming 100 feature frames/sec is 3.97537
+LOG (kld_nnet3-latgen-faster-parallel[5.4.16~3-4f22]:main():nnet3-latgen-faster-parallel.cc:296) Done 2 utterances, failed for 0
+LOG (kld_nnet3-latgen-faster-parallel[5.4.16~3-4f22]:main():nnet3-latgen-faster-parallel.cc:298) Overall log-likelihood per frame is 1.17744 over 1024 frames.
+LOG (kld_lattice-scale[5.4.16~3-4f22]:main():lattice-scale.cc:90) Done 2 lattices.
+[2019-02-14 15:26:00 vtk_ktrans] </decoding>
+[2019-02-14 15:26:00 vtk_ktrans] <command name="/usr/bin/perl -e 'printf qq(%.2f\n), 124/30'"/>
+[2019-02-14 15:26:00 vtk_ktrans] state=decode_nnet3 elapsed=124 RT=4.13
+[2019-02-14 15:26:00 vtk_ktrans] ==========
+[2019-02-14 15:26:00 vtk_ktrans] transition: decode_nnet3 -> latrescore_kld 
+[2019-02-14 15:26:00 vtk_ktrans] ==========
+[2019-02-14 15:26:00 vtk_ktrans] 
+[2019-02-14 15:26:00 vtk_ktrans] ******************************
+[2019-02-14 15:26:00 vtk_ktrans] Lattice rescoring by FST tools
+[2019-02-14 15:26:00 vtk_ktrans] ******************************
+[2019-02-14 15:26:00 vtk_ktrans] <kld_latrescoring>
+[2019-02-14 15:26:00 vtk_ktrans] f5 /home/MSF/tmp/7/eng/ifile.lat.scp JOB=1:1 /home/MSF/tmp/7/eng/lat.JOB.scp
+[2019-02-14 15:26:00 vtk_ktrans] <command name="/home/vtk/bin/kld_scp split /home/MSF/tmp/7/eng/ifile.lat.scp /home/MSF/tmp/7/eng/lat.1.scp "/>
+# /home/vtk/bin/kld_lattice-lmrescore-pruned --acoustic-scale=0.1 /home/vtk/conf/trans/cts/eng/eng-cts.g.const.fst /home/vtk/conf/trans/cts/eng/eng-cts.qg.const.fst scp:/home/MSF/tmp/7/eng/lat.1.scp ark,t,scp:/home/MSF/tmp/7/eng/latresc.1.ark,/home/MSF/tmp/7/eng/latresc.1.scp 
+# Started at Thu Feb 14 15:26:00 CET 2019
+#
+/home/vtk/bin/kld_lattice-lmrescore-pruned --acoustic-scale=0.1 /home/vtk/conf/trans/cts/eng/eng-cts.g.const.fst /home/vtk/conf/trans/cts/eng/eng-cts.qg.const.fst scp:/home/MSF/tmp/7/eng/lat.1.scp ark,t,scp:/home/MSF/tmp/7/eng/latresc.1.ark,/home/MSF/tmp/7/eng/latresc.1.scp 
+LOG (kld_lattice-lmrescore-pruned[5.4.16~3-4f22]:main():lattice-lmrescore-pruned.cc:98) Reading LMs...
+LOG (kld_lattice-lmrescore-pruned[5.4.16~3-4f22]:main():lattice-lmrescore-pruned.cc:136) Done.
+LOG (kld_lattice-lmrescore-pruned[5.4.16~3-4f22]:main():lattice-lmrescore-pruned.cc:194) Overall, succeeded for 2 lattices, failed for 0
+# Accounting: time=55 threads=1
+# Ended (code 0) at Thu Feb 14 15:26:55 CET 2019, elapsed time 55 seconds
+[2019-02-14 15:26:55 vtk_ktrans] <command name="/usr/bin/cat /home/MSF/tmp/7/eng/latresc.1.scp"/>
+[2019-02-14 15:26:55 vtk_ktrans] </kld_latrescoring>
+[2019-02-14 15:26:55 vtk_ktrans] <command name="/usr/bin/perl -e 'printf qq(%.2f\n), 55/30'"/>
+[2019-02-14 15:26:55 vtk_ktrans] state=latrescore_kld elapsed=55 RT=1.83
+[2019-02-14 15:26:55 vtk_ktrans] ==========
+[2019-02-14 15:26:55 vtk_ktrans] transition: latrescore_kld -> lat2ctm 
+[2019-02-14 15:26:55 vtk_ktrans] ==========
+[2019-02-14 15:26:55 vtk_ktrans] 
+[2019-02-14 15:26:55 vtk_ktrans] **********************************
+[2019-02-14 15:26:55 vtk_ktrans] 1-best extraction from FST-lattice
+[2019-02-14 15:26:55 vtk_ktrans] **********************************
+[2019-02-14 15:26:55 vtk_ktrans] <kldlat2ctm>
+[2019-02-14 15:26:55 vtk_ktrans] <command name="/home/vtk/bin/kld_lat2ctm -exec 'g305=kldlat2ctm;g13=/home/vtk/conf/trans/cts/eng;g19=/home/vtk/conf/trans/cts/eng;g20=/home/MSF/tmp/7/eng;g21=/home/MSF/tmp/7/eng;g65=eng;g117=cts;' -cfg /home/vtk/conf/trans/cts/eng/eng-cts.trans.cfg -list /home/MSF/tmp/7/eng/ifile.kldlatresc.scp -segment /home/MSF/tmp/7/eng/ifile.seg -bpath /home/vtk/bin -log /home/MSF/tmp/7/eng/kldlat2ctm.log -error /home/MSF/tmp/7/eng/kldlat2ctm.err.log -verbose 2"/>
+[2019-02-14 15:26:55 kld_lat2ctm] <command name="/usr/bin/rm -f /home/MSF/tmp/7/eng/kldlat2ctm.err.log"/>
+[2019-02-14 15:26:55 kld_lat2ctm] start decoding
+[2019-02-14 15:26:55 kld_lat2ctm] <command name="/home/vtk/bin/kld_lattice-scale --inv-acoustic-scale=10 scp:/home/MSF/tmp/7/eng/ifile.kldlatresc.scp ark:- | /home/vtk/bin/kld_lattice-add-penalty --word-ins-penalty=0 ark:- ark:- | /home/vtk/bin/kld_lattice-prune --beam=7 ark:- ark:- | /home/vtk/bin/kld_lattice-align-words-lexicon --output-error-lats=true --max-expand=10.0 --test=false /home/vtk/conf/trans/cts/eng/eng-cts.align_lexicon.int /home/vtk/conf/trans/cts/eng/eng-cts.nnet3.mdl ark:- ark:- | /home/vtk/bin/kld_lattice-to-ctm-conf --decode-mbr=true --frame-shift=0.03 ark:- - | f5 |/home/vtk/bin/kld_int2symb -f 5 /home/vtk/conf/trans/cts/eng/eng-cts.words.sym | /home/vtk/bin/kld_convert_ctm_vecsys /home/MSF/tmp/7/eng/ifile.seg | /usr/bin/sort -k1,1 -k2,2 -k3,3nb | /home/vtk/bin/kld_ctm2fctm"/>
+[2019-02-14 15:26:55 kld_lat2ctm] <command name="/usr/bin/cat"/>
+/home/vtk/bin/kld_lattice-scale --inv-acoustic-scale=10 scp:/home/MSF/tmp/7/eng/ifile.kldlatresc.scp ark:- 
+/home/vtk/bin/kld_lattice-to-ctm-conf --decode-mbr=true --frame-shift=0.03 ark:- - 
+/home/vtk/bin/kld_lattice-prune --beam=7 ark:- ark:- 
+/home/vtk/bin/kld_lattice-add-penalty --word-ins-penalty=0 ark:- ark:- 
+LOG (kld_lattice-scale[5.4.16~3-4f22]:main():lattice-scale.cc:90) Done 2 lattices.
+LOG (kld_lattice-add-penalty[5.4.16~3-4f22]:main():lattice-add-penalty.cc:62) Done adding word insertion penalty to 2 lattices.
+LOG (kld_lattice-prune[5.4.16~3-4f22]:main():lattice-prune.cc:95) For utterance ifile_SPK00001+00000-000_00019-270_1, pruned #states from 355 to 324 and #arcs from 678 to 601
+/home/vtk/bin/kld_lattice-align-words-lexicon --output-error-lats=true --max-expand=10.0 --test=false /home/vtk/conf/trans/cts/eng/eng-cts.align_lexicon.int /home/vtk/conf/trans/cts/eng/eng-cts.nnet3.mdl ark:- ark:- 
+LOG (kld_lattice-prune[5.4.16~3-4f22]:main():lattice-prune.cc:95) For utterance ifile_SPK00001+00019-270_00030-730_1, pruned #states from 124 to 111 and #arcs from 167 to 143
+LOG (kld_lattice-prune[5.4.16~3-4f22]:main():lattice-prune.cc:104) Overall, pruned from on average 239.5 to 217.5 states, and from 422.5 to 372 arcs, over 2 utterances.
+LOG (kld_lattice-prune[5.4.16~3-4f22]:main():lattice-prune.cc:108) Done 2 lattices.
+LOG (kld_lattice-align-words-lexicon[5.4.16~3-4f22]:main():lattice-align-words-lexicon.cc:138) Successfully aligned 2 lattices; 0 had errors.
+LOG (kld_lattice-to-ctm-conf[5.4.16~3-4f22]:main():lattice-to-ctm-conf.cc:172) For utterance ifile_SPK00001+00000-000_00019-270_1, Bayes Risk 5.8125, avg. confidence per-word 0.800856
+LOG (kld_lattice-to-ctm-conf[5.4.16~3-4f22]:main():lattice-to-ctm-conf.cc:172) For utterance ifile_SPK00001+00019-270_00030-730_1, Bayes Risk 1.92655, avg. confidence per-word 0.922639
+LOG (kld_lattice-to-ctm-conf[5.4.16~3-4f22]:main():lattice-to-ctm-conf.cc:181) Done 2 lattices.
+LOG (kld_lattice-to-ctm-conf[5.4.16~3-4f22]:main():lattice-to-ctm-conf.cc:182) Overall average Bayes Risk per sentence is 3.86953 and per word, 0.164661
+[2019-02-14 15:26:56 vtk_ktrans] </kldlat2ctm>
+[2019-02-14 15:26:56 vtk_ktrans] <command name="/usr/bin/perl -e 'printf qq(%.2f\n), 1/30'"/>
+[2019-02-14 15:26:56 vtk_ktrans] state=lat2ctm elapsed=1 RT=0.03
+[2019-02-14 15:26:56 vtk_ktrans] ==========
+[2019-02-14 15:26:56 vtk_ktrans] transition: lat2ctm -> buildtrans 
+[2019-02-14 15:26:56 vtk_ktrans] ==========
+[2019-02-14 15:26:56 vtk_ktrans] <command name="/home/vtk/bin/vtk_stmexport -to ids /home/MSF/tmp/7/eng.stm -verbose 2"/>
+regspkr=/excluded_region|inter_segment_gap/r
+
+use the open format
+open format='%fid+%uid'
+
+[2019-02-14 15:26:56 vtk_ktrans] <command name="/usr/bin/cat"/>
+[2019-02-14 15:26:56 vtk_ktrans] <command name="/usr/bin/cat"/>
+[2019-02-14 15:26:56 vtk_ktrans] <command name="/usr/bin/cat /home/MSF/tmp/7/eng/fword.ctm"/>
+[2019-02-14 15:26:56 vtk_ktrans] <command name="/usr/bin/cat"/>
+[2019-02-14 15:26:56 vtk_ktrans] <command name="/home/vtk/bin/vtk_ctmexport -part /home/MSF/tmp/7/eng.stm -to txt /home/MSF/tmp/7/eng/hyp.ctm | /home/vtk/bin/vtk_rewrite -d -g/home/MSF/tmp/7/eng/norm.gph -v0 /home/vtk/conf/trans/cts/eng/eng-cts.rls"/>
+command line=[/home/vtk/bin/vtk_rewrite -d -g/home/MSF/tmp/7/eng/norm.gph -v0 /home/vtk/conf/trans/cts/eng/eng-cts.rls]
+vtk_rewrite: load rewrite rules from file /home/vtk/conf/trans/cts/eng/eng-cts.rls
+vtk_rewrite: 200 rewrite rule(s) in class 0 from file /home/vtk/conf/trans/cts/eng/eng-cts.rls
+vtk_rewrite: 8 rewrite rule(s) in class 1 from file /home/vtk/conf/trans/cts/eng/eng-cts.rls
+vtk_rewrite: 11 rewrite rule(s) in class 2 from file /home/vtk/conf/trans/cts/eng/eng-cts.rls
+vtk_rewrite: 1 rewrite rule(s) in class 3 from file /home/vtk/conf/trans/cts/eng/eng-cts.rls
+vtk_rewrite: 220 rewrite rule(s) in total
+vtk_rewrite: ready (sentprocess V2.10)
+vtk_rewrite: end
+[2019-02-14 15:26:56 vtk_ktrans] <command name="/home/vtk/bin/vtk_ctmnorm -graph /home/MSF/tmp/7/eng/norm.gph /home/MSF/tmp/7/eng/hyp.ctm"/>
+[2019-02-14 15:26:56 vtk_ktrans] <command name="/usr/bin/perl -e 'printf qq(%.2f\n), 185/31'"/>
+[2019-02-14 15:26:56 vtk_ktrans] state=end elapsed=185 RT=5.97
+[2019-02-14 15:26:56 vtk_ktrans] end of processing
+[2019-02-14 15:26:56 vtk_ktrans] 
+[2019-02-14 15:26:56 vtk_trans] <command name="/usr/bin/cat /home/MSF/tmp/7/eng.ctm"/>
+[2019-02-14 15:26:56 vtk_trans] </trans>
+[2019-02-14 15:26:56 vtk_trans] 
+[2019-02-14 15:26:56 vtk_trans] <command name="/usr/bin/perl -e 'printf qq(%.2f\n), 185/30'"/>
+[2019-02-14 15:26:56 vtk_trans] state=transcription elapsed=185 RT=6.17
+[2019-02-14 15:26:56 vtk_trans] <command name="/usr/bin/cat"/>
+[2019-02-14 15:26:56 vtk_trans] <command name="/home/vtk/bin/vtk_ctmexport -to vml -part /home/MSF/tmp/7/part.stm -lang eng -addscores -procver 'VTK BIN Version 6.0.4 2018-11-30 VECSYS,VTK SPKRDIA CTS Version 3.2 2018-04-10 VECSYS,VTK TRANS CTS ENG Version 5.3.1 2018-06-07 VECSYS' -rmfillers -fname /home/MSF/tmp/7/ifilename.txt -sigdur 31 -verbose 2 /home/MSF/tmp/7/hyp.ctm"/>
+read CTM from '/home/MSF/tmp/7/hyp.ctm'
+read the diarization file: '/home/MSF/tmp/7/part.stm'
+[2019-02-14 15:26:56 vtk_trans] <command name="/usr/bin/perl -e 'printf qq(%.2f\n), 198/30'"/>
+[2019-02-14 15:26:56 vtk_trans] overall speech RT=6.60 (elapsed/speech-duration)
+[2019-02-14 15:26:56 vtk_trans] <command name="/usr/bin/perl -e 'printf qq(%.2f\n), 198/31'"/>
+[2019-02-14 15:26:56 vtk_trans] overall audio RT=6.39 (elapsed/audio-duration)
+[2019-02-14 15:26:56 vtk_trans] sum of partial realtimes:
+[2019-02-14 15:26:56 vtk_trans] state=end elapsed=198 RT=6.59

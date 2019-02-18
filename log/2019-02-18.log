@@ -1,0 +1,12 @@
+00:01:11 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+00:01:11 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+01:01:13 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+01:01:13 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+02:01:12 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+02:01:12 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+03:01:11 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+03:01:11 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+04:01:11 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+04:01:11 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+05:01:12 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+05:01:12 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf

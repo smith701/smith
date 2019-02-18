@@ -1,0 +1,7 @@
+#!/bin/sh
+#wsdl WebServiceMSFv2.php http://10.0.0.3/webservice/ server.wsdl index.php
+#ATTENTION : doit etre exécute dans une console msf01 pas ailleurs ;) 
+wsdl ../Toolbox/WebserviceMSFv2.php https://mediaspeech.com/webservicev2/ server.wsdl index.php 
+wsdl ../Toolbox/WebserviceMSFv2.php https://10.0.0.3/webservicev2/ serverinternal.wsdl index.php 
+wsdl ../Toolbox/WebserviceMSFv2.php https://10.0.0.3/dev/webservicev2/ serverdev.wsdl index.php 
+chown apache:apache *

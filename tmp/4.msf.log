@@ -1,0 +1,179 @@
+17:04:52 : Lib : /home/MSF/www/scripts
+17:04:52 : .:/usr/share/pear:/usr/share/php:/home/MSF/www/scripts:/home/MSF/www/ToolboxLib : /home/MSF/www/scripts /home/MSF
+18:04:52 : user_working_path=/users/1/working/
+
+********************************************************************
+* JobId        : 4
+* Host         : localhost
+* Script name  : /home/MSF/www/scripts/script_vtk_transcription.php
+* UserId       : 1
+* Username     : 
+********************************************************************
+* Environment Variables
+*----------------------
+SLURM_CHECKPOINT_IMAGE_DIR=/var/slurm/checkpoint
+SLURM_NODELIST=localhost
+SLURM_JOB_NAME=4
+VTK_SCHED_OPTS= -M msf -A transcription  --cpus-per-task=1
+SLURMD_NODENAME=localhost
+SLURM_TOPOLOGY_ADDR=localhost
+HOSTNAME=localhost
+VTK_JOBNAME=4
+SLURM_PRIO_PROCESS=0
+PATH_RESULTFILES=/users/1/result/
+SLURM_NODE_ALIASES=(null)
+MSF_SERVER_IP_ADDRESS=127.0.0.1
+SLURM_EXPORT_ENV=AUDIOFILE=test-cts-eng.wav,PATH_AUDIOFILES=/users/1/media/,PATH_RESULTFILES=/users/1/result/,PATH_TMPFILES=/home/MSF/tmp,PATH_VECSYS_TRANS=/home/vtk,COMMAND=trans,LANGUAGE=eng,AUDIOTYPE=cts,MULTILANGUE=0,QUALITY=2,IDUSER=1,RESULT_OUTPUT_FORMAT=vml,MYSQL_IP_ADDRESS=127.0.0.1,MYSQL_ADMIN_LOGIN=root,MYSQL_ADMIN_PASSWORD=XxXxX,,MSF_SERVER_IP_ADDRESS=127.0.0.1,DATABASENAME=msf,PATH_FILES=/home/MSF,PATH_AUDIOFILES=/users/1/media/,PATH_PBS=/opt/pbs/default/bin,PATH_SLURM=/usr/bin/,VTK_SCHED=proc,USERS_PATH=/users,DO_OPTIMIZE=true,OPT_EXE=/home/MSF/www/scripts/script_vtk_transcription.php,OPT_SCRIPTS=/home/MSF/www/scripts,OPT_QUEUE_NAME=,OPT_PRIO=0,OPT_MSF_TMP=/home/MSF/tmp,VTK_SCHED_OPTS= -M msf -A transcription  --cpus-per-task=1,RSYNCUSERNAME=msf,SSHPASS=XxXxX,,IDPROCESS=4,MAX_THREAD=1
+IDPROCESS=4
+OPT_MSF_TMP=/home/MSF/tmp
+SLURM_JOB_QOS=Added as default
+PATH_AUDIOFILES=/users/1/media/
+TMPDIR=/tmp
+SLURM_TOPOLOGY_ADDR_PATTERN=node
+MAX_THREAD=1
+JOBID=4
+USERS_PATH=/users
+QUALITY=2
+VTK_SCHED=proc
+PATH_PBS=/opt/pbs/default/bin
+RESULT_OUTPUT_FORMAT=vml
+IDUSER=1
+SLURM_NNODES=1
+PATH_SLURM=/usr/bin/
+RSYNCUSERNAME=msf
+COMMAND=trans
+AUDIOFILE=test-cts-eng.wav
+VRCTS_BIN=/usr/local/vrcts/bin
+SLURM_JOBID=6
+MYSQL_IP_ADDRESS=127.0.0.1
+DO_OPTIMIZE=true
+PATH=:/usr/local/vrcts/bin:/opt/pbs/default/bin:/usr/bin/
+SLURM_TASKS_PER_NODE=1
+VRCTS_TMP=/usr/tmp
+AUDIOTYPE=cts
+SLURM_JOB_ID=6
+SLURM_CPUS_PER_TASK=1
+OPT_PRIO=0
+PWD=/home/MSF/www/html
+SLURM_JOB_USER=msf
+PATH_TMPFILES=/home/MSF/tmp
+SLURM_JOB_UID=3000
+SLURM_NODEID=0
+SLURM_SUBMIT_DIR=/home/MSF/www/html
+SLURM_TASK_PID=16962
+PBS_JOBID=4
+SLURM_CPUS_ON_NODE=1
+OPT_SCRIPTS=/home/MSF/www/scripts
+SLURM_PROCID=0
+ENVIRONMENT=BATCH
+SLURM_JOB_NODELIST=localhost
+SHLVL=1
+PATH_FILES=/home/MSF
+SLURM_LOCALID=0
+SLURM_GET_USER_ENV=1
+LANGUAGE=eng
+PATH_VECSYS_TRANS=/home/vtk
+VRCTS_TRANS=/usr/local/vrcts/trans
+OPT_QUEUE_NAME=
+VRCTS_PART=/usr/local/vrcts/part
+SLURM_JOB_GID=100
+SLURM_JOB_CPUS_PER_NODE=1
+SLURM_CLUSTER_NAME=msf
+SLURM_GTIDS=0
+SLURM_SUBMIT_HOST=ms-v5-vm
+SSHPASS=XxXxX,
+SLURM_JOB_PARTITION=pri_normal
+OPT_EXE=/home/MSF/www/scripts/script_vtk_transcription.php
+MYSQL_ADMIN_PASSWORD=XxXxX,
+SLURM_JOB_ACCOUNT=transcription
+MULTILANGUE=0
+VRCTS_LID=/usr/local/vrcts/lid
+SLURM_JOB_NUM_NODES=1
+VTK_CODEC=none
+DATABASENAME=msf
+VRCTS_ROOT=/usr/local/vrcts
+MYSQL_ADMIN_LOGIN=root
+_=/usr/bin/env
+********************************************************************
+
+cp /users/1/media/test-cts-eng.wav /Audio/1/test-cts-eng.wav
+
+chmod a+rw /Audio/1/test-cts-eng.wav 
+Commande = ffmpeg -i /Audio/1/test-cts-eng.wav -vn -map_metadata -1 -acodec pcm_s16le -ar 8000  -f wav -y /Audio/1/test-cts-eng.wav.MSF.wav 
+ffmpeg version 2.8.15 Copyright (c) 2000-2018 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-28)
+  configuration: --prefix=/usr --bindir=/usr/bin --datadir=/usr/share/ffmpeg --incdir=/usr/include/ffmpeg --libdir=/usr/lib64 --mandir=/usr/share/man --arch=x86_64 --optflags='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic' --extra-ldflags='-Wl,-z,relro ' --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libvo-amrwbenc --enable-version3 --enable-bzlib --disable-crystalhd --enable-gnutls --enable-ladspa --enable-libass --enable-libcdio --enable-libdc1394 --disable-indev=jack --enable-libfreetype --enable-libgsm --enable-libmp3lame --enable-openal --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-libschroedinger --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libvorbis --enable-libv4l2 --enable-libx264 --enable-libx265 --enable-libxvid --enable-x11grab --enable-avfilter --enable-avresample --enable-postproc --enable-pthreads --disable-static --enable-shared --enable-gpl --disable-debug --disable-stripping --shlibdir=/usr/lib64 --enable-runtime-cpudetect
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+Guessed Channel Layout for  Input Stream #0.0 : mono
+Input #0, wav, from '/Audio/1/test-cts-eng.wav':
+  Duration: 00:00:30.73, bitrate: 128 kb/s
+    Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 8000 Hz, 1 channels, s16, 128 kb/s
+Output #0, wav, to '/Audio/1/test-cts-eng.wav.MSF.wav':
+  Metadata:
+    ISFT            : Lavf56.40.101
+    Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 8000 Hz, mono, s16, 128 kb/s
+    Metadata:
+      encoder         : Lavc56.60.100 pcm_s16le
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+size=       8kB time=00:00:00.51 bitrate= 129.2kbits/s    size=     480kB time=00:00:30.73 bitrate= 128.0kbits/s    
+video:0kB audio:480kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.015864%
+Commande = chmod a+rw /Audio/1/test-cts-eng.wav.MSF.wav
+Commande = ls -l /Audio/1/test-cts-eng.wav.MSF.wav* 
+18:06:29 :  AudioFilename = /Audio/1/test-cts-eng.wav.MSF.wav
+/home/MSF/bin/vplay -fwav:r /Audio/1/test-cts-eng.wav.MSF.wav
+
+UPDATE t_audiofiles SET filesize='491750',audioduration='30.730' WHERE  (refuser=1) AND (msffilename='test-cts-eng.wav') 
+
+UPDATE t_processes SET audioduration='00:00:30', audiodurationseconds=30.730 WHERE  (refuser=1) AND (idprocess=4) 
+
+18:06:40 : cp /Audio/1/test-cts-eng.wav.MSF.wav /users/1/working/test-cts-eng.wav.MSF.wav
+
+18:06:41 : ln -s /users/1/media/test-cts-eng.wav /users/1/working/
+ln: failed to create symbolic link '/users/1/working/test-cts-eng.wav': File exists
+18:06:41 : Commande = chmod a+rw /users/1/working/test-cts-eng.wav.MSF.wav
+
+DeleteTempFiles=1
+rm -fv /Audio/1/test-cts-eng.wav* 
+Warning : Lid not used, change settings to enable it
+
+------------- command ----------------------------------
+18:06:44 : /home/vtk/bin/vtk_trans  -ifile /users/1/working//test-cts-eng.wav.MSF.wav  -ofile /users/1/working//4.xml  -bpath /home/vtk/bin  -cpath /home/vtk/conf  -wpath /home/MSF/tmp/4  -verbose 2  -to vml    -normalize    -quality 2  -log /home/MSF/tmp/4.log  -jobpriority 1   -language eng         -type cts    -jobname 4  -jobnthreads 1   
+--------------------------------------------------------
+sql=UPDATE t_processes SET  commandline='/home/vtk/bin/vtk_trans  -ifile /users/1/working//test-cts-eng.wav.MSF.wav  -ofile /users/1/working//4.xml  -bpath /home/vtk/bin  -cpath /home/vtk/conf  -wpath /home/MSF/tmp/4  -verbose 2  -to vml    -normalize    -quality 2  -log /home/MSF/tmp/4.log  -jobpriority 1   -language eng         -type cts    -jobname 4  -jobnthreads 1   ', execaudiotype='cts', status='R',  hostrunner='localhost',  datestart='2019-01-17 18:06:40', execlanguage='eng' WHERE ((idprocess=4) AND (refuser=1))  
+
+********************************************************************
+18:16:00 :  : CodeRetour=0
+********************************************************************
+VTK_STATUS=0
+
+=================================================
+18:16:00 : Proc mode, calling        : /home/MSF/www/scripts/script_vtk_merge.php 2>&1
+18:16:07 : /home/MSF/www/scripts/script_vtk_merge.php MERGE PHP Lib : /home/MSF/www/scripts
+librairie chemin VAR ENV
+/home/MSF/www/scripts/script_vtk_merge.php MERGE PHP PATH : /home/MSF
+Lib : /home/MSF/www/scripts /home/MSF
+
+*************************************
+rm -rf /home/MSF/tmp/4
+sql=UPDATE t_processes SET errorcode=0,errormessage='success' WHERE (idprocess=4)
+Writing billing /home/MSF/billing.txt : 2019-01-17 18:16:07;1;4;cts;eng;30.730
+sh: /home/MSF/billing.txt: Permission denied
+
+[2019-01-17 18:10:07 vtk_kspkrdia] state=end elapsed=181 RT=5.84
+[2019-01-17 18:15:59 vtk_ktrans] state=end elapsed=350 RT=11.29
+[2019-01-17 18:16:00 vtk_trans] state=end elapsed=544 RT=17.89
+sql=UPDATE t_processes SET status="E", datestop="2019-01-17 18:16:07", progress=100, rt=17.89 WHERE ((idprocess=4) AND (status <> 'C'))
+
+DeleteTempFiles=1
+rm -fv /Audio/1/test-cts-eng.wav*
+0TRANS_CodeRetour=0

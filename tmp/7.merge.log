@@ -1,0 +1,20 @@
+18:55:21 : *****************************************
+18:55:21 : script_vtk_merge.php
+18:55:21 : /home/MSF/www/scripts/script_vtk_transcription.php
+18:55:21 : JobId=7
+18:55:21 : Status=0
+18:55:21 : ReturnCode=0
+
+18:55:21 : chmod 664 /users/1/working//7.xml
+18:55:21 : cp -p /users/1/working//7.xml /users/1/result//test-cts-eng.xml
+18:55:21 : rm -rf /home/MSF/tmp/7
+15:26:57 : *****************************************
+15:26:57 : script_vtk_merge.php
+15:26:57 : /home/MSF/www/scripts/script_vtk_transcription.php
+15:26:57 : JobId=7
+15:26:57 : Status=0
+15:26:57 : ReturnCode=0
+
+15:26:57 : chmod 664 /users/1/working//7.xml
+15:26:57 : cp -p /users/1/working//7.xml /users/1/result//test-cts-eng.xml
+15:26:57 : rm -rf /home/MSF/tmp/7

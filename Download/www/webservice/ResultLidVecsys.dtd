@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+    TODO define vocabulary identification
+    PUBLIC ID: -//vendor//vocabulary//EN
+    SYSTEM ID: http://server/path/ResultLidVecsys.dtd
+
+-->
+
+<!--
+    An example how to use this DTD from your XML document:
+
+    <?xml version="1.0"?>
+
+    <!DOCTYPE AudioDoc SYSTEM "ResultLidVecsys.dtd">
+
+    <AudioDoc>
+    ...
+    </AudioDoc>
+-->
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT AudioDoc (SegmentList)*>
+<!ATTLIST AudioDoc
+    path CDATA #IMPLIED
+    name CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT SegmentList (SpeechSegment)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT SpeechSegment (#PCDATA)>
+<!ATTLIST SpeechSegment
+    score CDATA #IMPLIED
+  >

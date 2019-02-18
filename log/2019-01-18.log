@@ -1,0 +1,256 @@
+00:01:07 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+00:01:07 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+01:01:08 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+01:01:08 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+02:01:07 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+02:01:07 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+03:01:07 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+03:01:07 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+04:01:07 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+04:01:07 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+05:01:07 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+05:01:07 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+06:01:07 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+06:01:07 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+07:01:07 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+07:01:07 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+08:01:07 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+08:01:07 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+09:01:08 [?] (daemon_cron_cleaning) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+09:01:08 [?] (daemon_cron_cleaning) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+09:22:36 [msf] (StatusAndResults.php) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+09:22:36 [msf] (StatusAndResults.php) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+09:22:37 [?] (jQListJobs.php) *******************************************
+09:22:37 [?] (jQListJobs.php) Array
+(
+    [GetPage] => 
+)
+
+09:22:37 [?] (jQListJobs.php) Array
+(
+)
+
+09:22:37 [?] (jQListJobs.php) *******************************************
+09:22:37 [msf] (jQListJobs.php) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+09:22:37 [msf] (jQListJobs.php) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+09:22:37 [msf] (jQListJobs.php) GetPage=1
+09:22:37 [?] (jQListJobs.php) *******************************************
+09:22:37 [?] (jQListJobs.php) Array
+(
+    [action] => list
+    [jtStartIndex] => 0
+    [jtPageSize] => 20
+)
+
+09:22:37 [?] (jQListJobs.php) Array
+(
+    [FilterOrSearch] => Filter
+    [DateStart] => 
+    [DateStop] => 
+    [UserFilter] => 0
+)
+
+09:22:37 [?] (jQListJobs.php) *******************************************
+09:22:37 [msf] (jQListJobs.php) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+09:22:37 [msf] (jQListJobs.php) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+09:22:37 [msf] (jQListJobs.php) Array
+(
+    [action] => list
+    [jtStartIndex] => 0
+    [jtPageSize] => 20
+)
+
+09:22:37 [msf] (jQListJobs.php) Array
+(
+    [FilterOrSearch] => Filter
+    [DateStart] => 
+    [DateStop] => 
+    [UserFilter] => 0
+    [SearchJobId] => 
+    [SearchJobAudioFileName] => 
+)
+
+09:22:37 [msf] (jQListJobs.php) DBJQ_ViewAllJobStatus(DateSubmit, DESC, , , , 0, 20, )
+09:22:37 [msf] (jQListJobs.php) SELECT idprocess,refuser,jobid,username,processname,sourcename,hostrunner,audiofile,audioduration,status,datesubmit,datestart,datestop, CONCAT(`execaudiotype`, ' ', `execlanguage`) as typelang, commandline, errorcode, sec_to_time(TIMESTAMPDIFF(SECOND, datestart, datestop)) AS processduration , TRUNCATE((TIMESTAMPDIFF(SECOND, datestart, datestop) / audiodurationseconds),2) as processratio  FROM t_processes   WHERE   true  ORDER BY DateSubmit DESC LIMIT 0,20
+09:22:37 [msf] (jQListJobs.php) ln -f -s "/users/" "/home/MSF/www/html/tmp/AdMiN_UNSF82"
+09:22:37 [msf] (jQListJobs.php) --------->4
+09:26:46 [?] (index.php) login username=msf
+09:26:46 [?] (index.php) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+09:26:46 [?] (index.php) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+09:26:46 [msf] (index.php) DisplayReturn Result = <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE result SYSTEM "MsfResults.dtd">
+<result>
+<status>0</status>
+<message>success</message>
+
+09:26:46 [msf] (index.php) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+09:26:46 [msf] (index.php) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+09:26:46 [msf] (index.php)  Upload test-cts-eng.wav stored as:test-cts-eng.wav
+09:26:46 [msf] (index.php)  fichier texte encode test-cts-eng.wav mime=text/plain; charset=us-ascii size=664259
+09:26:46 [msf] (index.php)  file_put_contents ret=491724
+09:26:46 [msf] (index.php) upload tmp=/tmp/msfG4SW7I filename=test-cts-eng.wav utf8=test-cts-eng.wav content_dir=/users/1/media/
+09:26:46 [msf] (index.php)  ERROR -> deleting tmp file ret=1007
+09:26:46 [msf] (index.php) DisplayReturn Result = <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE result SYSTEM "MsfResults.dtd">
+<result>
+<status>1007</status>
+<message>file not copied into MSF content directory</message>
+
+09:27:42 [msf] (index.php) login username=msf
+09:27:42 [msf] (index.php) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+09:27:42 [msf] (index.php) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+09:27:42 [msf] (index.php) DisplayReturn Result = <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE result SYSTEM "MsfResults.dtd">
+<result>
+<status>0</status>
+<message>success</message>
+
+09:27:42 [msf] (index.php) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+09:27:42 [msf] (index.php) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+09:27:42 [msf] (index.php)  Upload test-cts-eng.wav stored as:test-cts-eng.wav
+09:27:42 [msf] (index.php)  fichier texte encode test-cts-eng.wav mime=text/plain; charset=us-ascii size=664259
+09:27:42 [msf] (index.php)  file_put_contents ret=491724
+09:27:42 [msf] (index.php) upload tmp=/tmp/msfuLdV8d filename=test-cts-eng.wav utf8=test-cts-eng.wav content_dir=/users/1/media/
+09:27:42 [msf] (index.php)  ERROR -> deleting tmp file ret=1007
+09:27:42 [msf] (index.php) DisplayReturn Result = <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE result SYSTEM "MsfResults.dtd">
+<result>
+<status>1007</status>
+<message>file not copied into MSF content directory</message>
+
+09:29:11 [?] (jQListJobs.php) *******************************************
+09:29:11 [?] (jQListJobs.php) Array
+(
+    [action] => WhichMode
+)
+
+09:29:11 [?] (jQListJobs.php) Array
+(
+)
+
+09:29:11 [?] (jQListJobs.php) *******************************************
+09:29:11 [msf] (jQListJobs.php) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+09:29:11 [msf] (jQListJobs.php) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+09:29:11 [?] (jQListJobs.php) *******************************************
+09:29:11 [?] (jQListJobs.php) Array
+(
+    [GetPage] => 
+)
+
+09:29:11 [?] (jQListJobs.php) Array
+(
+)
+
+09:29:11 [?] (jQListJobs.php) *******************************************
+09:29:11 [msf] (jQListJobs.php) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+09:29:11 [msf] (jQListJobs.php) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+09:29:11 [msf] (jQListJobs.php) GetPage=1
+09:29:11 [?] (jQListJobs.php) *******************************************
+09:29:11 [?] (jQListJobs.php) Array
+(
+    [action] => list
+    [jtStartIndex] => 0
+    [jtPageSize] => 20
+)
+
+09:29:11 [?] (jQListJobs.php) Array
+(
+    [FilterOrSearch] => Filter
+    [DateStart] => 
+    [DateStop] => 
+    [UserFilter] => 0
+)
+
+09:29:11 [?] (jQListJobs.php) *******************************************
+09:29:11 [msf] (jQListJobs.php) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+09:29:11 [msf] (jQListJobs.php) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+09:29:11 [msf] (jQListJobs.php) Array
+(
+    [action] => list
+    [jtStartIndex] => 0
+    [jtPageSize] => 20
+)
+
+09:29:11 [msf] (jQListJobs.php) Array
+(
+    [FilterOrSearch] => Filter
+    [DateStart] => 
+    [DateStop] => 
+    [UserFilter] => 0
+    [SearchJobId] => 
+    [SearchJobAudioFileName] => 
+)
+
+09:29:11 [msf] (jQListJobs.php) DBJQ_ViewAllJobStatus(DateSubmit, DESC, , , , 0, 20, )
+09:29:11 [msf] (jQListJobs.php) SELECT idprocess,refuser,jobid,username,processname,sourcename,hostrunner,audiofile,audioduration,status,datesubmit,datestart,datestop, CONCAT(`execaudiotype`, ' ', `execlanguage`) as typelang, commandline, errorcode, sec_to_time(TIMESTAMPDIFF(SECOND, datestart, datestop)) AS processduration , TRUNCATE((TIMESTAMPDIFF(SECOND, datestart, datestop) / audiodurationseconds),2) as processratio  FROM t_processes   WHERE   true  ORDER BY DateSubmit DESC LIMIT 0,20
+09:29:11 [msf] (jQListJobs.php) ln -f -s "/users/" "/home/MSF/www/html/tmp/AdMiN_H6e4ZI"
+09:29:11 [msf] (jQListJobs.php) --------->4
+09:29:13 [?] (jQListJobs.php) *******************************************
+09:29:13 [?] (jQListJobs.php) Array
+(
+    [action] => WhichMode
+)
+
+09:29:13 [?] (jQListJobs.php) Array
+(
+)
+
+09:29:13 [?] (jQListJobs.php) *******************************************
+09:29:13 [msf] (jQListJobs.php) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+09:29:13 [msf] (jQListJobs.php) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+09:29:13 [?] (jQListJobs.php) *******************************************
+09:29:13 [?] (jQListJobs.php) Array
+(
+    [GetPage] => 
+)
+
+09:29:13 [?] (jQListJobs.php) Array
+(
+)
+
+09:29:13 [?] (jQListJobs.php) *******************************************
+09:29:13 [msf] (jQListJobs.php) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+09:29:13 [msf] (jQListJobs.php) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+09:29:13 [msf] (jQListJobs.php) GetPage=1
+09:29:13 [?] (jQListJobs.php) *******************************************
+09:29:13 [?] (jQListJobs.php) Array
+(
+    [action] => list
+    [jtStartIndex] => 0
+    [jtPageSize] => 20
+)
+
+09:29:13 [?] (jQListJobs.php) Array
+(
+    [FilterOrSearch] => Filter
+    [DateStart] => 
+    [DateStop] => 
+    [UserFilter] => 0
+)
+
+09:29:13 [?] (jQListJobs.php) *******************************************
+09:29:13 [msf] (jQListJobs.php) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+09:29:13 [msf] (jQListJobs.php) DB_Connecte connected to 127.0.0.1 user : root DB=msf
+09:29:13 [msf] (jQListJobs.php) Array
+(
+    [action] => list
+    [jtStartIndex] => 0
+    [jtPageSize] => 20
+)
+
+09:29:13 [msf] (jQListJobs.php) Array
+(
+    [FilterOrSearch] => Filter
+    [DateStart] => 
+    [DateStop] => 
+    [UserFilter] => 0
+    [SearchJobId] => 
+    [SearchJobAudioFileName] => 
+)
+
+09:29:13 [msf] (jQListJobs.php) DBJQ_ViewAllJobStatus(DateSubmit, DESC, , , , 0, 20, )
+09:29:13 [msf] (jQListJobs.php) SELECT idprocess,refuser,jobid,username,processname,sourcename,hostrunner,audiofile,audioduration,status,datesubmit,datestart,datestop, CONCAT(`execaudiotype`, ' ', `execlanguage`) as typelang, commandline, errorcode, sec_to_time(TIMESTAMPDIFF(SECOND, datestart, datestop)) AS processduration , TRUNCATE((TIMESTAMPDIFF(SECOND, datestart, datestop) / audiodurationseconds),2) as processratio  FROM t_processes   WHERE   true  ORDER BY DateSubmit DESC LIMIT 0,20
+09:29:13 [msf] (jQListJobs.php) ln -f -s "/users/" "/home/MSF/www/html/tmp/AdMiN_EuGuxh"
+09:29:13 [msf] (jQListJobs.php) --------->4
+09:29:16 [msf] (logout.php) DB_Connecte : Try connecting to 127.0.0.1 user : root DB=msf
+09:29:16 [msf] (logout.php) DB_Connecte connected to 127.0.0.1 user : root DB=msf

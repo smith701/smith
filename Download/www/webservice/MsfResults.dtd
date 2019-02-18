@@ -1,0 +1,18 @@
+<!ELEMENT result (status, message,jobid?,translationtext?,translationaudiopath?,joblists?,resultxml?)>
+<!ELEMENT status (#PCDATA)>
+<!ELEMENT message (#PCDATA)>
+<!ELEMENT jobid (#PCDATA)>
+<!ELEMENT streamid (#PCDATA)>
+<!ELEMENT translationtext (#PCDATA)>
+<!ELEMENT translationaudiopath (#PCDATA)>
+<!ELEMENT resultxml (#PCDATA)>
+
+<!ELEMENT joblists (job*)>
+<!ELEMENT job (jobident, processtype, jobstatus, startdate?, stopdate?)>
+<!ELEMENT jobident (#PCDATA)>
+<!ELEMENT processtype (#PCDATA)>
+<!ELEMENT jobstatus (#PCDATA)>
+<!ELEMENT startdate (#PCDATA)>
+<!ELEMENT stopdate (#PCDATA)>
+
+

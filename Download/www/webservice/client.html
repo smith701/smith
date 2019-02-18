@@ -1,0 +1,144 @@
+<html>
+<body>
+
+<xmp>
+<?php
+
+/****************************************************************************
+ * affiche le résultat renvoyé par le serveur
+****************************************************************************/
+function DisplayResult($fct, $res)
+{
+    echo '----------------------------------<br>';
+    echo '<H2>Command : <b>'.$fct." </b></H2><br>";
+    if (isset($res))
+    {
+        foreach ($res as $line)
+        {
+            echo htmlentities($line)."<br>";    
+        }
+    }   
+}
+
+/****************************************************************************
+****************************************************************************/
+
+
+    // On désactive la mise en cache du wsdl (pour le test)
+    ini_set('soap.wsdl_cache_enabled', 0);
+    
+    try 
+    {
+        $Url = 'https://mediaspeech.com/webservice/server.wsdl'; 
+        // Instanciation du client SOAP
+        $client = new SoapClient(
+            $Url, 
+            array(
+                    //'proxy_host'=>'monproxy.net', // si vous utilisez un proxy...
+                    //'proxy_port'=>8080, // si vous utilisez un proxy...       
+                    'trace'=> 1,
+                    'soap_version'=> SOAP_1_1
+                )   
+        );
+       // $retour_ws =  $client -> __call('getHelloWorld',array());
+        //print_r('hello='.$retour_ws.'<br>');
+        //var_dump($retour_ws);
+     
+        $retour_ws =  $client -> __call('login',array('username'=>'xxx', 'password'=>'xxx'));
+        DisplayResult('login', $retour_ws);
+
+        //----------------------------------
+        if (0)
+        {
+            $filename="/tmp/MEM_000031295_RF.BWF"; //chemin complet sur serveur
+            $f = file_get_contents($filename);
+            
+            
+            $retour_ws =  $client -> __call('upload',array('filename'=> $filename,
+                                                'fileContent' => base64_encode($f)));
+            DisplayResult('upload', $retour_ws);
+        }
+
+        //----------------------------------
+        if (0)
+        {
+            
+            $retour_ws =  $client -> __call('trans',array(
+                            'filename'=>'audio.mp3',
+                            'type'=>'bn',
+                            'language'=>'fre',
+                            'channel'=>'0',
+                            'quality'=>'0',
+                            'duration'=>'0',
+                            'corpus'=>'',
+                            'callback'=>'http://address/dev/callback.php')
+                            );
+            DisplayResult('trans', $retour_ws);
+        }
+
+        //----------------------------------
+        if (0)
+        {
+            
+            $retour_ws =  $client -> __call('part',array(
+                            'filename'=>'PKBN_FRE_FR_20071112_2000_FRANCE2_NEWS.wav',
+                            'type'=>'bn',
+                            'channel'=>'0',
+                            'speaker'=>'0')
+                            );
+            DisplayResult('part', $retour_ws);
+        }
+
+        //----------------------------------
+        if (1)
+        {
+            $retour_ws =  $client -> __call('status',array('jobid'=>'1848'));
+            DisplayResult('status', $retour_ws);
+        }
+
+        //----------------------------------
+        if (0)
+        {
+            $retour_ws =  $client -> __call('cancel',array('jobid'=>'1877'));
+            DisplayResult('cancel', $retour_ws);
+        }
+
+        //----------------------------------
+        if (0)
+        {
+            $retour_ws =  $client -> __call('result',array(
+                    'jobid'=>'263555',
+                    'format'=>'txt'));
+            DisplayResult('result', $retour_ws);
+        }
+
+        //----------------------------------
+        if (0)
+        {
+            $retour_ws =  $client -> __call('delete',array('filename'=>'aa.wav'));
+            DisplayResult('delete', $retour_ws);
+        }
+
+        //----------------------------------
+        $retour_ws =  $client -> __call('logout',array());
+        DisplayResult('logout', $retour_ws);
+
+        //----------------------------------
+/*      // Affichage des requêtes et réponses SOAP (pour debug)
+        echo '<br />Requete SOAP : '.htmlspecialchars($client->__getLastRequest()).'<br />';
+        echo '<br />Reponse SOAP : '.htmlspecialchars($client->__getLastResponse()).'<br />';
+        
+        // Affichage du résultat
+        print_r($retour_ws);*/
+    }
+    catch (Exception $e)    
+    {
+        //TODO  Traitement en cas d'exception, pour l'instant on l'affiche tel quel...
+        echo $e;
+    }
+    
+?>
+</xmp>
+
+</body>
+</html>
